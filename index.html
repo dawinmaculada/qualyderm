@@ -3,34 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qualyderm — Medicina & Estética · Retiro, Madrid</title>
+<title>Medicina estética y centro de estética en Retiro | Qualyderm</title>
+<meta name="description" content="Qualyderm · centro de medicina estética y estética avanzada en la zona de Retiro, Madrid. Tratamientos personalizados de rostro, cuerpo, medicina estética y depilación láser, con un equipo médico y estético propio. Reserva tu valoración gratuita.">
+<link rel="canonical" href="https://qualyderm.es/">
+<meta property="og:title" content="Qualyderm — Medicina estética y estética avanzada en Retiro, Madrid">
+<meta property="og:description" content="Tratamientos personalizados de rostro, cuerpo y piel con resultados naturales. Equipo médico y estético propio en la zona de Retiro.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     Google Analytics 4 — SUSTITUYE G-XXXXXXXXXX por tu ID real
+     (Analytics > Administrar > Flujos de datos > ID de medición)
+     Mientras el ID sea el de ejemplo, no se envía nada.
+     ============================================================ -->
+<script>
+  window.GA_ID = 'G-XXXXXXXXXX';
+  if (GA_ID && GA_ID.indexOf('XXXX') === -1) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+</script>
+
+<!-- Datos estructurados: negocio local de medicina y estética -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "HealthAndBeautyBusiness"],
+  "name": "Qualyderm — Medicina & Estética",
+  "url": "https://qualyderm.es",
+  "image": "https://qualyderm.es/assets/img/hero-inicio.jpg",
+  "telephone": "+34914334065",
+  "email": "info@qualyderm.es",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Julio Rey Pastor",
+    "addressLocality": "Madrid",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": { "@type": "City", "name": "Madrid" },
+  "sameAs": [
+    "https://www.facebook.com/qualyderm.medicinaestetica"
+  ]
+  /* TODO: añadir "geo" (lat/long), "openingHoursSpecification" y "aggregateRating" cuando estén disponibles */
+}
+</script>
+
 <style>
-
-  .nav-dropdown{position:relative;}
-  .dropdown-toggle{display:flex;align-items:center;gap:6px;}
-  .dropdown-toggle span{font-size:9px;transition:transform .25s ease;}
-  .nav-dropdown:hover .dropdown-toggle span{transform:rotate(180deg);}
-
-  .submenu{
-    display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);
-    min-width:216px;background:var(--blanco);padding:8px;
-    border:1px solid var(--linea);box-shadow:0 22px 44px -18px rgba(30,50,38,.30);
-    z-index:1000;text-align:center;
-  }
-  .submenu::before{content:'';position:absolute;top:-16px;left:0;right:0;height:16px;}
-  .submenu a{
-    display:block;padding:11px 22px;white-space:nowrap;
-    font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--verde);
-    transition:background .2s ease,color .2s ease;
-  }
-  .submenu a::after{display:none;}
-  .submenu a:hover{background:var(--marfil-2);color:var(--bronce);}
-  .nav-dropdown:hover .submenu{display:block;}
-  .nav-reserva{display:none;}
-
 
   :root{
     --verde: #1E3226;
@@ -64,22 +93,21 @@
   ul{list-style:none;}
   .wrap{max-width:1160px;margin:0 auto;padding:0 40px;}
   h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:400;line-height:1.18;color:var(--verde);letter-spacing:-.01em;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
   .eyebrow{
     font-family:'Work Sans',sans-serif;
-    font-size:11px;
-    letter-spacing:.26em;
-    text-transform:uppercase;
-    font-weight:500;
-    color:var(--bronce);
-    display:flex;align-items:center;gap:12px;
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;
+    color:var(--bronce);display:flex;align-items:center;gap:12px;
   }
-  .eyebrow::before{content:'';width:22px;height:1px;background:var(--bronce);}
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--bronce);flex-shrink:0;}
+
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:15px 32px;border-radius:1px;font-family:'Work Sans',sans-serif;
     font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
     border:1px solid transparent;transition:all .45s cubic-bezier(.4,0,.2,1);
-    white-space:nowrap;
+    white-space:nowrap;text-align:center;
   }
   .btn-primary{background:var(--verde);color:var(--marfil);}
   .btn-primary:hover{background:var(--verde-2);box-shadow:0 18px 34px -18px rgba(30,50,38,.45);}
@@ -87,36 +115,50 @@
   .btn-ghost:hover{border-color:var(--verde);}
   .btn-light{background:transparent;color:var(--marfil);border-color:rgba(251,249,245,.35);}
   .btn-light:hover{border-color:var(--marfil);}
+  .btn-wa{background:#25623b;color:#fff;}
+  .btn-wa:hover{background:#1f512f;}
 
-  /* reveal-on-scroll */
-  [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
-  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  /* reveal-on-scroll — por defecto TODO visible; el efecto solo se activa con JS (.js) */
+  [data-reveal]{opacity:1;transform:none;}
+  .js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+  .js [data-reveal].is-visible{opacity:1;transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){
-    [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
+    .js [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
     html{scroll-behavior:auto;}
   }
 
   /* ---------- header ---------- */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:1000;
-    padding:22px 0;transition:all .4s ease;
-  }
-  header.scrolled{
-    padding:12px 0;background:rgba(246,241,231,.92);backdrop-filter:blur(14px);
-    box-shadow:0 1px 0 rgba(31,51,40,.08);
-  }
+  header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 0;transition:all .4s ease;}
+  header.scrolled{padding:12px 0;background:rgba(246,241,231,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(31,51,40,.08);}
   header .wrap{display:flex;align-items:center;justify-content:space-between;position:relative;}
   .logo{display:flex;align-items:center;gap:13px;}
   .logo svg{width:42px;height:38px;flex-shrink:0;color:var(--verde);overflow:visible;}
   .logo-text{display:flex;flex-direction:column;line-height:1;}
   .logo-text .name{font-family:'Fraunces',serif;font-size:22px;color:var(--verde);letter-spacing:.01em;}
   .logo-text .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);margin-top:3px;}
-  nav.mainnav{display:flex;align-items:center;gap:36px;}
+
+  nav.mainnav{display:flex;align-items:center;gap:34px;}
   nav.mainnav a{font-size:14px;font-weight:500;color:var(--verde);position:relative;padding:4px 0;}
-  nav.mainnav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--bronce);transition:width .3s ease;}
-  nav.mainnav a:hover::after{width:100%;}
-  .header-right{display:flex;align-items:center;gap:22px;}
-  .phone-mini{font-size:13.5px;font-weight:600;color:var(--verde);display:flex;align-items:center;gap:8px;}
+  nav.mainnav>a::after,.dropdown-toggle::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--bronce);transition:width .3s ease;}
+  nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100%;}
+  .nav-dropdown{position:relative;}
+  .dropdown-toggle{display:flex;align-items:center;gap:6px;}
+  .dropdown-toggle span{font-size:9px;transition:transform .25s ease;}
+  .nav-dropdown:hover .dropdown-toggle span{transform:rotate(180deg);}
+  .submenu{
+    display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);
+    min-width:216px;background:var(--blanco);padding:8px;
+    border:1px solid var(--linea);box-shadow:0 22px 44px -18px rgba(30,50,38,.30);
+    z-index:1000;text-align:center;
+  }
+  .submenu::before{content:'';position:absolute;top:-16px;left:0;right:0;height:16px;}
+  .submenu a{display:block;padding:11px 22px;white-space:nowrap;font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--verde);transition:background .2s ease,color .2s ease;}
+  .submenu a::after{display:none;}
+  .submenu a:hover{background:var(--marfil-2);color:var(--bronce);}
+  .nav-dropdown:hover .submenu{display:block;}
+  .nav-reserva{display:none;}
+
+  .header-right{display:flex;align-items:center;gap:20px;}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
   .burger span{width:24px;height:2px;background:var(--verde);transition:transform .3s ease,opacity .3s ease;}
   .burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
@@ -124,40 +166,108 @@
   .burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
   /* ---------- hero ---------- */
-  .sr-only,.hero-copy{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
   .hero{
-    position:relative;padding:128px 0 96px;overflow:hidden;
+    position:relative;padding:128px 0 92px;overflow:hidden;
     background:radial-gradient(ellipse 1000px 650px at 86% 4%, rgba(219,179,166,.16), transparent 62%), var(--marfil);
   }
   .hero .wrap{position:relative;z-index:2;}
+  .hero-copy{max-width:760px;margin:0 auto 40px;text-align:center;}
+  .hero-copy .eyebrow{justify-content:center;font-size:11px;letter-spacing:.2em;}
+  .hero-copy h1{font-size:clamp(34px,4.6vw,58px);font-weight:400;letter-spacing:-.015em;margin:20px 0 22px;}
+  .hero-copy h1 em{font-style:italic;color:var(--bronce);font-weight:400;}
+  .hero-copy .lede{font-size:16.5px;font-weight:300;color:#54584f;max-width:560px;margin:0 auto;}
   .hero-figure{position:relative;margin:0;}
   .hero-figure img{width:100%;aspect-ratio:1432/736;object-fit:cover;object-position:center;border-radius:2px;box-shadow:var(--sombra);}
-  .hero-ctas{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:44px;}
-  .trust-row{display:flex;gap:38px;flex-wrap:wrap;border-top:1px solid var(--linea);padding-top:26px;}
-  .hero .trust-row{justify-content:center;margin-top:44px;padding-top:30px;}
-  .trust-row div{font-size:11.5px;letter-spacing:.06em;color:var(--verde-2);font-weight:500;display:flex;align-items:center;gap:9px;}
-  .trust-row div::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--bronce);}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:40px;}
+  .trust-row{display:flex;gap:34px;flex-wrap:wrap;justify-content:center;border-top:1px solid var(--linea);padding-top:28px;margin-top:44px;}
+  .trust-row div{font-size:11.5px;letter-spacing:.05em;color:var(--verde-2);font-weight:500;display:flex;align-items:center;gap:9px;}
+  .trust-row div::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--bronce);flex-shrink:0;}
 
   /* ---------- section shell ---------- */
-  section{padding:150px 0;position:relative;}
-  .section-head{max-width:600px;margin-bottom:80px;}
-  .section-head h2{font-size:clamp(28px,2.9vw,40px);margin-top:18px;font-weight:400;}
-  .section-head p{color:#5b5f57;font-size:15.5px;font-weight:300;margin-top:18px;max-width:520px;}
+  section{padding:132px 0;position:relative;}
+  .section-head{max-width:620px;margin-bottom:72px;}
+  .section-head.centered{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head.centered .eyebrow{justify-content:center;}
+  .section-head h2{font-size:clamp(28px,2.9vw,40px);margin-top:16px;font-weight:400;}
+  .section-head p{color:#5b5f57;font-size:15.5px;font-weight:300;margin-top:18px;max-width:540px;}
+  .section-head.centered p{margin-left:auto;margin-right:auto;}
+  .sec-cta{margin-top:52px;display:flex;gap:16px;flex-wrap:wrap;}
+  .sec-cta.centered{justify-content:center;}
 
-  /* ---------- pillars (tratamientos / medicina) ---------- */
+  /* ---------- router: ¿qué te gustaría mejorar? ---------- */
+  .router{background:var(--marfil-2);}
+  .router-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--linea);}
+  .router-grid a{
+    padding:38px 26px;border-right:1px solid var(--linea);
+    display:flex;flex-direction:column;gap:12px;background:var(--marfil);
+    transition:background .3s ease;
+  }
+  .router-grid a:last-child{border-right:none;}
+  .router-grid a:hover{background:var(--blanco);}
+  .router-grid .r-ico{width:26px;height:26px;color:var(--bronce);}
+  .router-grid h3{font-size:18px;font-weight:500;}
+  .router-grid p{font-size:12.5px;font-weight:300;color:#5b5f57;line-height:1.55;}
+  .router-grid .r-go{margin-top:auto;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--verde);display:inline-flex;align-items:center;gap:7px;}
+  .router-grid a:hover .r-go{color:var(--bronce);}
+
+  /* ---------- pillars (tratamientos) ---------- */
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
   .pillar{background:transparent;padding:8px 34px 8px 0;position:relative;border-left:1px solid var(--linea);padding-left:34px;}
   .pillar:first-child{border-left:none;padding-left:0;}
-  .pillar-img{width:100%;height:248px;overflow:hidden;margin-bottom:32px;border-radius:1px;}
-  .pillar-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) sepia(4%);transition:transform .8s cubic-bezier(.16,1,.3,1);}
+  .pillar-img{width:100%;height:248px;overflow:hidden;margin-bottom:30px;border-radius:1px;}
+  .pillar-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) sepia(3%);transition:transform .8s cubic-bezier(.16,1,.3,1);}
   .pillar:hover .pillar-img img{transform:scale(1.045);}
-  .pillar .num{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:14px;color:var(--rosa);margin-bottom:14px;display:block;letter-spacing:.02em;}
-  .pillar h3{font-size:22px;margin-bottom:16px;font-weight:400;}
-  .pillar p{color:#5b5f57;font-size:14px;font-weight:300;margin-bottom:28px;}
+  .pillar .num{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:13px;color:var(--rosa);margin-bottom:12px;display:block;letter-spacing:.02em;}
+  .pillar h3{font-size:23px;margin-bottom:10px;font-weight:400;}
+  .pillar .p-benefit{color:var(--verde-2);font-size:14.5px;font-weight:400;margin-bottom:14px;}
+  .pillar p{color:#5b5f57;font-size:13.5px;font-weight:300;margin-bottom:26px;}
   .pillar-link{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);display:inline-flex;align-items:center;gap:9px;padding-bottom:6px;border-bottom:1px solid var(--linea);transition:border-color .3s ease;}
   .pillar:hover .pillar-link{border-color:var(--bronce);}
   .pillar-link svg{width:12px;height:12px;transition:transform .3s ease;}
   .pillar:hover .pillar-link svg{transform:translateX(5px);}
+
+  /* ---------- resultados / qué esperar ---------- */
+  .resultados{background:var(--marfil-2);}
+  .expect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linea);border:1px solid var(--linea);}
+  .expect{background:var(--marfil);padding:34px 30px;display:flex;flex-direction:column;gap:14px;}
+  .expect h3{font-size:17px;font-weight:500;}
+  .expect .e-row{display:flex;justify-content:space-between;gap:12px;font-size:12.5px;border-top:1px solid var(--linea);padding-top:10px;}
+  .expect .e-row span:first-child{color:#8a8d84;letter-spacing:.04em;text-transform:uppercase;font-size:10.5px;font-weight:600;}
+  .expect .e-row span:last-child{color:var(--carbon);font-weight:500;text-align:right;}
+  .resultados .disclaimer{margin-top:26px;font-size:12px;font-weight:300;color:#8a8d84;max-width:640px;}
+
+  /* ---------- método qualyderm ---------- */
+  .metodo .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--linea);}
+  .metodo .step{padding:38px 30px 0 0;border-left:1px solid var(--linea);padding-left:30px;}
+  .metodo .step:first-child{border-left:none;padding-left:0;}
+  .metodo .step .n{font-family:'Fraunces',serif;font-size:15px;font-style:italic;color:var(--rosa);letter-spacing:.05em;}
+  .metodo .step h3{font-size:18px;font-weight:500;margin:14px 0 10px;letter-spacing:.02em;text-transform:uppercase;}
+  .metodo .step p{font-size:13.5px;font-weight:300;color:#5b5f57;}
+
+  /* ---------- testimonios ---------- */
+  .testi{background:var(--verde);color:var(--marfil);}
+  .testi .eyebrow{color:var(--rosa-suave);}
+  .testi .eyebrow::before{background:var(--rosa-suave);}
+  .testi .section-head h2{color:var(--marfil);}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .testi-card{border:1px solid rgba(246,241,231,.18);padding:32px 28px;display:flex;flex-direction:column;gap:16px;border-radius:1px;}
+  .testi-stars{color:var(--bronce-luz);letter-spacing:3px;font-size:13px;}
+  .testi-card p{font-weight:300;font-size:14px;color:rgba(251,249,245,.85);}
+  .testi-card .who{margin-top:auto;font-size:12px;color:rgba(251,249,245,.55);letter-spacing:.04em;}
+  .testi-foot{margin-top:44px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .testi-score{font-family:'Fraunces',serif;font-size:26px;color:var(--rosa-suave);}
+  .testi-score span{font-size:13px;font-family:'Work Sans',sans-serif;color:rgba(251,249,245,.55);display:block;letter-spacing:.04em;}
+
+  /* ---------- equipo / nosotros ---------- */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+  .team-card{background:transparent;padding:0 40px;border-left:1px solid var(--linea);}
+  .team-card:first-child{border-left:none;padding-left:0;}
+  .team-photo{width:100%;aspect-ratio:4/5;background:var(--marfil-2);border:1px solid var(--linea);margin-bottom:24px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .team-photo img{width:100%;height:100%;object-fit:cover;}
+  .team-photo .ph{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#b3b3ac;text-align:center;padding:0 20px;}
+  .team-card .area{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);font-weight:500;margin-bottom:10px;}
+  .team-card h4{font-size:19px;margin-bottom:12px;font-weight:400;}
+  .team-card p{font-size:13.5px;font-weight:300;color:#5b5f57;}
 
   /* ---------- laser section (dark) ---------- */
   .laser{background:var(--verde);color:var(--marfil);}
@@ -169,107 +279,76 @@
   .laser-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8);}
   .laser-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(155deg,rgba(30,50,38,.82),rgba(30,50,38,.5) 65%);}
   .laser-visual svg{position:relative;z-index:2;width:70%;height:70%;opacity:.85;}
-  .laser-text p{color:rgba(251,249,245,.72);font-weight:300;font-size:15px;margin-bottom:32px;max-width:500px;}
-  .laser-list{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px;margin-top:8px;}
+  .laser-text p{color:rgba(251,249,245,.72);font-weight:300;font-size:15px;margin-bottom:28px;max-width:500px;}
+  .laser-list{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;margin:8px 0 34px;}
   .laser-list li{display:flex;gap:13px;font-size:14px;font-weight:300;color:rgba(251,249,245,.88);align-items:flex-start;}
   .laser-list li svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;color:var(--rosa-suave);}
 
-  /* ---------- equipo ---------- */
-  .equipo-banner{width:100%;aspect-ratio:21/8;overflow:hidden;margin-bottom:70px;border-radius:1px;}
-  .equipo-banner img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);}
-  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
-  .team-card{background:transparent;padding:0 40px;border-left:1px solid var(--linea);}
-  .team-card:first-child{border-left:none;padding-left:0;}
-  .team-card .ring-mark{width:32px;height:32px;margin-bottom:28px;color:var(--bronce);}
-  .team-card .area{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);font-weight:500;margin-bottom:12px;}
-  .team-card h4{font-size:19px;margin-bottom:14px;font-weight:400;}
-  .team-card p{font-size:13.5px;font-weight:300;color:#5b5f57;}
-
-  /* ---------- reserva online (Velsy) ---------- */
-  .reserva{background:var(--marfil-2);}
-  .reserva-grid{display:grid;grid-template-columns:1fr .95fr;gap:90px;align-items:center;}
-  .reserva-list{margin-top:28px;display:flex;flex-direction:column;gap:14px;}
-  .reserva-list li{display:flex;gap:12px;font-size:14px;font-weight:300;color:var(--verde-2);align-items:flex-start;}
-  .reserva-list li svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;color:var(--bronce);}
-  .powered-by{margin-top:22px;font-size:11.5px;letter-spacing:.04em;color:#8a8d84;}
-  .powered-by strong{color:var(--verde);font-weight:600;}
-  .powered-by a strong{transition:border-color .3s ease;border-bottom:1px solid transparent;}
-  .powered-by a:hover strong{border-color:currentColor;}
-
-  .booking-card{background:var(--blanco);border-radius:1px;box-shadow:var(--sombra);padding:36px 36px 32px;position:relative;}
-  .booking-head{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--verde);font-weight:600;padding-bottom:22px;margin-bottom:26px;border-bottom:1px solid var(--linea);}
-  .booking-dot{width:7px;height:7px;border-radius:50%;background:#7fae86;}
-  .booking-step{margin-bottom:26px;}
-  .booking-label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8a8d84;font-weight:500;margin-bottom:12px;}
-  .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
-  .chip{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:400;padding:9px 14px;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
-  .chip.is-active,.chip:hover{border-color:var(--verde);background:var(--verde);color:var(--marfil);}
-  .day-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
-  .day{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 0;border:1px solid var(--linea);background:transparent;border-radius:1px;cursor:pointer;transition:all .25s ease;}
-  .day .d{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#8a8d84;}
-  .day .n{font-family:'Fraunces',serif;font-size:16px;color:var(--verde);}
-  .day.is-active,.day:hover{border-color:var(--verde);background:var(--verde);}
-  .day.is-active .d,.day.is-active .n,.day:hover .d,.day:hover .n{color:var(--marfil);}
-  .time-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
-  .time{font-family:'Work Sans',sans-serif;font-size:12.5px;padding:10px 0;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
-  .time.is-active,.time:hover{border-color:var(--verde);background:var(--verde);color:var(--marfil);}
-  .booking-confirm{width:100%;margin-top:6px;}
-
-  /* confirmación estilo Velsy */
-  .booking-confirmation{
-    position:absolute;inset:0;z-index:5;background:var(--blanco);border-radius:1px;
-    padding:44px 34px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;opacity:0;visibility:hidden;transition:opacity .4s ease;
-  }
-  .booking-confirmation.is-shown{opacity:1;visibility:visible;}
-  .booking-confirmation .bc-check{width:52px;height:52px;color:var(--bronce);margin-bottom:16px;}
-  .booking-confirmation h4{font-size:22px;color:var(--verde);font-weight:400;margin-bottom:8px;}
-  .booking-confirmation .bc-sub{font-size:13px;font-weight:300;color:#8a8d84;margin-bottom:24px;}
-  .booking-confirmation .bc-sub strong{color:var(--carbon);font-weight:500;}
-  .bc-summary{width:100%;background:var(--marfil-2);border-radius:1px;padding:18px 20px;display:flex;flex-direction:column;gap:11px;text-align:left;}
-  .bc-summary .bc-row{display:flex;justify-content:space-between;gap:14px;font-size:13px;}
-  .bc-summary .bc-row span:first-child{color:#8a8d84;}
-  .bc-summary .bc-row span:last-child{color:var(--carbon);font-weight:500;text-align:right;}
-  .bc-summary .bc-row.bc-date span:last-child{text-transform:capitalize;}
-  .bc-again{background:none;border:none;cursor:pointer;margin-top:22px;font-family:'Work Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--verde);border-bottom:1px solid var(--linea);padding-bottom:4px;}
-  .bc-again:hover{border-color:var(--bronce);}
-  .bc-powered{margin-top:18px;font-size:11px;color:#b3b3ac;}
-  .bc-powered strong{color:var(--bronce);font-weight:600;}
-  .bc-powered a strong{transition:border-color .3s ease;border-bottom:1px solid transparent;}
-  .bc-powered a:hover strong{border-color:currentColor;}
-
-  /* ---------- gift + tolerance strip ---------- */
-  .strip{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid var(--linea);}
-  .strip-card{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;}
-  .strip-card.gift{background:transparent;border-right:1px solid var(--linea);}
-  .strip-card.tolerance{background:transparent;}
-  .strip-card h3{font-size:26px;margin:16px 0 16px;font-weight:400;}
-  .strip-card p{font-size:14.5px;font-weight:300;color:#5b5f57;margin-bottom:28px;max-width:400px;}
-
-  /* ---------- consulta form ---------- */
-  .consulta{background:var(--marfil-2);}
-  .consulta-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:90px;align-items:center;}
-  .form-card{background:var(--blanco);padding:52px;border-radius:1px;box-shadow:var(--sombra);}
-  .form-card h3{font-size:22px;margin-bottom:8px;font-weight:400;}
-  .form-card .sub{color:#5b5f57;font-weight:300;font-size:13.5px;margin-bottom:32px;}
+  /* ---------- valoración / form ---------- */
+  .valoracion{background:var(--marfil-2);}
+  .valoracion-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start;}
+  .valoracion-grid .intro h2{font-size:clamp(27px,3vw,40px);margin-top:14px;}
+  .valoracion-grid .intro p{color:#4b5049;font-size:16px;margin-top:18px;max-width:420px;}
+  .valoracion-grid .intro .trust-row{justify-content:flex-start;border-top:none;padding-top:0;margin-top:34px;}
+  .form-card{background:var(--blanco);padding:46px;border-radius:1px;box-shadow:var(--sombra);}
+  .form-card h3{font-size:20px;margin-bottom:6px;font-weight:400;}
+  .form-card .sub{color:#5b5f57;font-weight:300;font-size:13.5px;margin-bottom:28px;}
   .field{margin-bottom:20px;}
-  .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--verde-2);font-weight:500;margin-bottom:9px;}
-  .field input,.field textarea{
+  .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--verde-2);font-weight:500;margin-bottom:11px;}
+  .field input{
     width:100%;border:none;border-bottom:1px solid rgba(30,50,38,.2);background:transparent;
     padding:10px 2px;font-family:'Work Sans',sans-serif;font-weight:300;font-size:14.5px;color:var(--carbon);
     transition:border-color .3s ease;
   }
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--bronce);}
-  .field-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;font-weight:300;color:#5b5f57;margin-bottom:30px;}
+  .field input:focus{outline:none;border-color:var(--bronce);}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:400;padding:9px 15px;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
+  .chip.is-active,.chip:hover{border-color:var(--verde);background:var(--verde);color:var(--marfil);}
+  .field-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;font-weight:300;color:#5b5f57;margin:6px 0 26px;}
   .field-check input{margin-top:3px;}
+  .form-alt{margin-top:16px;text-align:center;font-size:12.5px;font-weight:300;color:#8a8d84;}
+  .form-alt a{color:#25623b;font-weight:600;border-bottom:1px solid transparent;transition:border-color .3s ease;}
+  .form-alt a:hover{border-color:currentColor;}
+  .form-status{margin-top:14px;font-size:13px;font-weight:400;color:var(--verde-2);display:none;}
+  .form-status.show{display:block;}
+
+  /* ---------- reserva online (Velsy) ---------- */
+  .reserva{background:var(--marfil);}
+  .reserva-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .reserva h2{font-size:clamp(28px,2.9vw,40px);font-weight:400;margin-top:18px;}
+  .reserva-grid .r-copy p{color:#5b5f57;font-weight:300;font-size:15.5px;margin-top:18px;max-width:420px;}
+  .reserva-list{margin-top:24px;display:flex;flex-direction:column;gap:13px;}
+  .reserva-list li{display:flex;gap:12px;font-size:14px;font-weight:300;color:var(--verde-2);align-items:flex-start;}
+  .reserva-list li svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;color:var(--bronce);}
+  .powered-by{margin-top:22px;font-size:11.5px;letter-spacing:.04em;color:#8a8d84;}
+  .powered-by a strong{color:var(--verde);font-weight:600;transition:border-color .3s ease;border-bottom:1px solid transparent;}
+  .powered-by a:hover strong{border-color:currentColor;}
+  .reserva-card{background:var(--verde);color:var(--marfil);border-radius:1px;padding:48px 44px;box-shadow:var(--sombra);}
+  .reserva-card .eyebrow{color:var(--rosa-suave);}
+  .reserva-card .eyebrow::before{background:var(--rosa-suave);}
+  .reserva-card h3{color:var(--marfil);font-size:24px;font-weight:400;margin:16px 0 12px;}
+  .reserva-card p{font-size:14px;font-weight:300;color:rgba(251,249,245,.72);margin-bottom:28px;}
+  .reserva-card ol{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:14px;margin-bottom:30px;}
+  .reserva-card ol li{counter-increment:step;display:flex;gap:14px;font-size:13.5px;font-weight:300;color:rgba(251,249,245,.85);}
+  .reserva-card ol li::before{content:counter(step);font-family:'Fraunces',serif;font-size:13px;color:var(--rosa-suave);border:1px solid rgba(246,241,231,.3);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+  /* ---------- regalo + tolerancia strip ---------- */
+  .strip{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--linea);}
+  .strip-card{padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
+  .strip-card.gift{border-right:1px solid var(--linea);}
+  .strip-card h3{font-size:24px;margin:14px 0 14px;font-weight:400;}
+  .strip-card p{font-size:14px;font-weight:300;color:#5b5f57;margin-bottom:26px;max-width:400px;}
 
   /* ---------- contacto ---------- */
-  .contact-info{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:70px;border-top:1px solid var(--linea);}
-  .contact-item{background:transparent;padding:34px 0 0 44px;border-left:1px solid var(--linea);}
+  .contact-info{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border-top:1px solid var(--linea);}
+  .contact-item{background:transparent;padding:32px 24px 0 0;border-left:1px solid var(--linea);padding-left:32px;}
   .contact-item:first-child{border-left:none;padding-left:0;}
   .contact-item .lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce);font-weight:500;margin-bottom:12px;}
-  .contact-item .val{font-family:'Fraunces',serif;font-size:18px;font-weight:400;color:var(--verde);}
-  .map-embed{margin-top:70px;filter:sepia(6%) saturate(80%) opacity(.94);}
+  .contact-item .val{font-family:'Fraunces',serif;font-size:16px;font-weight:400;color:var(--verde);line-height:1.4;}
+  .contact-item .val a{border-bottom:1px solid transparent;transition:border-color .3s ease;}
+  .contact-item .val a:hover{border-color:var(--bronce);}
+  .contact-item small{display:block;font-family:'Work Sans',sans-serif;font-size:12px;font-weight:300;color:#8a8d84;margin-top:6px;}
+  .map-embed{margin-top:64px;filter:sepia(6%) saturate(80%) opacity(.94);}
   .map-embed iframe{width:100%;height:320px;border:0;display:block;}
 
   /* ---------- footer ---------- */
@@ -286,10 +365,16 @@
   .socials a{width:34px;height:34px;border:1px solid rgba(246,241,231,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;}
   .socials a:hover{border-color:var(--bronce-luz);color:var(--bronce-luz);}
 
+  /* ---------- barra fija móvil ---------- */
+  .mobilebar{display:none;}
+
   /* ---------- responsive ---------- */
   @media (max-width:1080px) and (min-width:981px){
     .pillars{grid-template-columns:1fr 1fr;}
     .pillar:nth-child(3){border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:40px;margin-top:40px;grid-column:1 / -1;}
+    .router-grid{grid-template-columns:1fr 1fr;}
+    .router-grid a:nth-child(2){border-right:none;}
+    .router-grid a:nth-child(3),.router-grid a:nth-child(4){border-top:1px solid var(--linea);}
   }
   @media (max-width:980px){
     .burger{display:flex;}
@@ -302,48 +387,59 @@
     nav.mainnav.is-open{display:flex;}
     nav.mainnav>a,.nav-dropdown{width:100%;text-align:center;}
     nav.mainnav>a{padding:12px 0;}
-    nav.mainnav a::after{display:none;}
-    .nav-dropdown+a,.nav-dropdown~a{border-top:1px solid var(--linea);}
+    nav.mainnav>a::after{display:none;}
+    .nav-dropdown~a{border-top:1px solid var(--linea);}
     .dropdown-toggle{justify-content:center;padding:12px 0;}
     .dropdown-toggle span{display:none;}
-    .submenu{
-      display:block;position:static;transform:none;min-width:0;
-      border:none;box-shadow:none;padding:2px 0 8px;background:transparent;
-    }
+    .submenu{display:block;position:static;transform:none;min-width:0;border:none;box-shadow:none;padding:2px 0 8px;background:transparent;}
     .submenu::before{display:none;}
     .submenu a{padding:9px 0;font-weight:400;color:var(--verde-2);}
     .nav-reserva{display:block;color:var(--bronce)!important;font-weight:600!important;letter-spacing:.08em;text-transform:uppercase;font-size:12px!important;}
-    .hero{padding-top:120px;}
-    .hero-copy{position:static;width:auto;height:auto;margin:0 0 34px;overflow:visible;clip:auto;}
-    .hero-copy,.hero-copy *{white-space:normal;}
-    .hero-copy h1{font-size:clamp(27px,6.6vw,40px);font-weight:400;letter-spacing:-.015em;margin:16px 0 18px;line-height:1.18;max-width:560px;}
-    .hero-copy h1 em{font-style:italic;color:var(--bronce);font-weight:400;}
-    .hero-copy .lede{font-size:15px;font-weight:300;color:#54584f;max-width:520px;}
-    .hero-copy .eyebrow{display:block;letter-spacing:.18em;}
-    .hero-copy .eyebrow::before{display:none;}
+
+    .hero{padding-top:118px;}
     .hero-figure img{aspect-ratio:5/4;object-position:76% 28%;}
-    .hero-ctas{margin-top:34px;}
-    .hero .trust-row{margin-top:36px;}
-    .pillars,.team-grid,.strip,.laser-grid,.consulta-grid,.contact-info,.reserva-grid{grid-template-columns:1fr;}
-    .pillar,.team-card,.contact-item{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:40px;margin-top:40px;}
-    .pillar:first-child,.team-card:first-child,.contact-item:first-child{border-top:none;padding-top:0;margin-top:0;}
+    .hero-ctas{margin-top:32px;}
+
+    section{padding:88px 0;}
+    .section-head{margin-bottom:52px;}
+    .pillars,.team-grid,.reserva-grid,.valoracion-grid,.laser-grid,.strip{grid-template-columns:1fr;}
+    .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
+    .pillar,.team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
+    .pillar:first-child,.team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
+    .metodo .step{border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:30px;margin-top:2px;}
+    .metodo .step:first-child{border-top:none;}
     .strip-card.gift{border-right:none;border-bottom:1px solid var(--linea);}
     .laser-visual{aspect-ratio:16/9;}
-    .equipo-banner{aspect-ratio:16/9;margin-bottom:50px;}
-    .booking-card{margin-top:20px;}
-    section{padding:90px 0;}
+    .laser-list{grid-template-columns:1fr;}
+    .valoracion-grid{gap:44px;}
+    .form-card{padding:34px 26px;}
+
+    .mobilebar{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:900;
+      box-shadow:0 -6px 24px -8px rgba(30,50,38,.28);
+    }
+    .mobilebar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 0;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .mobilebar .mb-wa{background:#25623b;color:#fff;}
+    .mobilebar .mb-book{background:var(--verde);color:var(--marfil);}
+    .mobilebar svg{width:15px;height:15px;}
+    footer{padding-bottom:88px;}
   }
-  @media (max-width:560px){
+  @media (max-width:600px){
     .wrap{padding:0 20px;}
     .header-right .btn{display:none;}
-    .hero-copy .eyebrow{font-size:10px;letter-spacing:.15em;}
-    .hero-ctas .btn{width:100%;}
-    .mini-stats{grid-template-columns:1fr;gap:10px;}
-    .phone-mini{display:none;}
+    .hero-copy h1{font-size:clamp(28px,7vw,40px);}
+    .hero-ctas .btn,.sec-cta .btn{width:100%;}
+    .sec-cta{flex-direction:column;}
+    .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr;}
+    .router-grid a{border-right:none;border-bottom:1px solid var(--linea);}
+    .router-grid a:last-child{border-bottom:none;}
+    .contact-item{border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:28px;}
+    .contact-item:first-child{border-top:none;padding-top:0;}
   }
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 
 <!-- ================= HEADER ================= -->
 <header id="siteHeader">
@@ -368,12 +464,13 @@
           <a href="paginas/medicina-estetica.html">Medicina estética</a>
         </div>
       </div>
-      <a href="#equipo">Equipo</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" target="_blank" rel="noopener" class="nav-reserva">Reservar cita</a>
+      <a href="#metodo">Método Qualyderm</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" target="_blank" rel="noopener" class="nav-reserva" data-ga="reservar_menu_movil">Reservar cita</a>
     </nav>
     <div class="header-right">
-      <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" class="btn btn-primary" target="_blank" rel="noopener">Reserva ahora</a>
+      <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" class="btn btn-primary" target="_blank" rel="noopener" data-ga="reservar_header">Reserva ahora</a>
       <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -382,149 +479,256 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-copy">
-      <div class="eyebrow">Centro de medicina y estética · Zona Retiro, Madrid</div>
+    <div class="hero-copy" data-reveal>
+      <div class="eyebrow">Medicina estética y estética avanzada en Retiro, Madrid</div>
       <h1>Resultados que se notan.<br>Nunca que se <em>declaran</em>.</h1>
-      <p class="lede">25 años cuidando la piel de Madrid con la medicina estética más avanzada — y el criterio de saber cuándo parar. Un equipo médico y estético propio, para tratamientos tan personalizados como tu piel.</p>
+      <p class="lede">Tratamientos personalizados para mejorar rostro, cuerpo y piel, con resultados naturales. Un equipo médico y estético propio que primero te escucha y después trata.</p>
     </div>
 
     <figure class="hero-figure" data-reveal>
-      <img src="assets/img/hero-inicio.jpg" alt="Tarjeta impresa sobre una encimera de mármol en una sala de tratamientos de Qualyderm, con la frase «Resultados que se notan. Nunca que se declaran.» y la ventana con vistas a Madrid al fondo.">
+      <!-- TODO: sustituir por una fotografía real (profesional atendiendo, cabina o tratamiento facial de Qualyderm). -->
+      <img src="assets/img/hero-inicio.jpg" alt="Sala de tratamientos de Qualyderm, centro de medicina y estética en la zona de Retiro, Madrid.">
     </figure>
 
     <div class="hero-ctas" data-reveal style="transition-delay:.1s">
-      <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" class="btn btn-primary" target="_blank" rel="noopener">Reserva tu cita online</a>
-      <a href="#tratamientos" class="btn btn-ghost">Descubre los tratamientos</a>
+      <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_hero">Reservar valoración gratuita</a>
+      <a href="#tratamientos" class="btn btn-ghost">Ver tratamientos</a>
     </div>
 
     <div class="trust-row" data-reveal style="transition-delay:.18s">
       <div>25+ años de experiencia</div>
       <div>Equipo médico y estético propio</div>
       <div>Cirujano miembro de SECPRE</div>
+      <div>Zona Retiro, Madrid</div>
     </div>
   </div>
 </section>
 
-<!-- ================= TRATAMIENTOS / MEDICINA ================= -->
+<!-- ================= ¿QUÉ TE GUSTARÍA MEJORAR? ================= -->
+<section class="router" id="empezar">
+  <div class="wrap">
+    <div class="section-head centered" data-reveal>
+      <div class="eyebrow">Empieza por aquí</div>
+      <h2>¿Qué te gustaría mejorar?</h2>
+      <p>Elige el área que más te interesa y te llevamos directamente a lo que podemos hacer. Si no lo tienes claro, tienes una valoración gratuita.</p>
+    </div>
+    <div class="router-grid" data-reveal>
+      <a href="paginas/estetica-facial.html" data-ga="router_rostro">
+        <svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8.5 14c1 1.2 5 1.2 7 0M9 9.5h.01M15 9.5h.01"/></svg>
+        <h3>Rostro</h3>
+        <p>Luminosidad, firmeza, manchas, líneas de expresión y una piel más uniforme.</p>
+        <span class="r-go">Ver <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="paginas/estetica-corporal.html" data-ga="router_cuerpo">
+        <svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 21c0-4 2.5-8 6-8s6 4 6 8"/></svg>
+        <h3>Cuerpo</h3>
+        <p>Remodelación, firmeza, grasa localizada, celulitis y mejora de la silueta.</p>
+        <span class="r-go">Ver <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#laser" data-ga="router_depilacion">
+        <svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v6M12 22v-4M5 5l3 3M19 5l-3 3M4 13h4M16 13h4"/><circle cx="12" cy="13" r="3"/></svg>
+        <h3>Depilación</h3>
+        <p>Depilación láser adaptada a tu piel y tu vello, con valoración previa.</p>
+        <span class="r-go">Ver <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="paginas/medicina-estetica.html" data-ga="router_medicina">
+        <svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M3 12h18" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="9"/></svg>
+        <h3>Medicina estética</h3>
+        <p>Rejuvenecimiento natural sin perder tu expresión, siempre con valoración médica.</p>
+        <span class="r-go">Ver <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRATAMIENTOS (3 áreas) ================= -->
 <section id="tratamientos">
   <div class="wrap">
     <div class="section-head" data-reveal>
       <div class="eyebrow">Tres áreas, un mismo criterio</div>
-      <h2>Estética facial, corporal y medicina estética</h2>
+      <h2>Estética y medicina, trabajando juntas</h2>
       <p>Cada rostro y cada cuerpo se estudian de forma individual. Por eso en Qualyderm el área estética y el área médica comparten diagnóstico — para llegar siempre a la solución más precisa, nunca a la más genérica.</p>
     </div>
     <div class="pillars">
       <div class="pillar" id="facial" data-reveal>
-        <div class="pillar-img"><img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=900&q=80" alt="Tratamiento de estética facial en Qualyderm" loading="lazy"></div>
+        <div class="pillar-img"><img src="assets/img/tratamiento-facial.jpg" alt="Tratamiento facial en Qualyderm" loading="lazy"></div>
         <span class="num">Área 01</span>
-        <h3>Estética facial</h3>
-        <p>Higiene, hidratación, luminosidad, manchas, radiofrecuencia, HIFU y láser. Protocolos faciales por nuestra técnica especialista, con los activos más adecuados para cada piel.</p>
-        <a href="paginas/estetica-facial.html" class="pillar-link">Ver tratamientos faciales <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Rostro</h3>
+        <p class="p-benefit">Recupera luminosidad, firmeza y una piel más uniforme.</p>
+        <p>Higiene y oxigenación, hidratación, manchas, peeling, radiofrecuencia, HIFU y láser. Protocolos faciales realizados por nuestra técnica especialista.</p>
+        <a href="paginas/estetica-facial.html" class="pillar-link" data-ga="ver_rostro">Ver tratamientos de rostro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="pillar" id="corporal" data-reveal style="transition-delay:.1s">
-        <div class="pillar-img"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=900&q=80" alt="Tratamiento de estética corporal en Qualyderm" loading="lazy"></div>
+        <div class="pillar-img"><img src="assets/img/corporal-remodelacion.jpg" alt="Tratamiento de estética corporal en Qualyderm" loading="lazy"></div>
         <span class="num">Área 02</span>
-        <h3>Estética corporal</h3>
-        <p>Remodelación, grasa localizada, celulitis, reafirmación muscular, flacidez, antiestrías y depilación láser. Aparatología avanzada y protocolos combinados.</p>
-        <a href="paginas/estetica-corporal.html" class="pillar-link">Ver tratamientos corporales <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Cuerpo</h3>
+        <p class="p-benefit">Remodelación, firmeza y mejora de la silueta.</p>
+        <p>Remodelación corporal, grasa localizada, celulitis, reafirmación muscular, flacidez, antiestrías y depilación láser. Aparatología avanzada y protocolos combinados.</p>
+        <a href="paginas/estetica-corporal.html" class="pillar-link" data-ga="ver_cuerpo">Ver tratamientos de cuerpo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="pillar" id="medicina" data-reveal style="transition-delay:.2s">
-        <div class="pillar-img"><img src="https://images.unsplash.com/photo-1552511556-9f16dcb6561f?auto=format&fit=crop&w=900&q=80" alt="Medicina estética en Qualyderm" loading="lazy"></div>
+        <div class="pillar-img"><img src="assets/img/medicina-acido-hialuronico.jpg" alt="Medicina estética en Qualyderm" loading="lazy"></div>
         <span class="num">Área 03</span>
         <h3>Medicina estética</h3>
-        <p>Dirigida por nuestra doctora, pionera en técnicas de infiltración. Líneas de expresión, contorno de ojos y labios, grasa localizada, hiperhidrosis y revitalización capilar.</p>
-        <a href="paginas/medicina-estetica.html" class="pillar-link">Ver medicina estética <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="p-benefit">Rejuvenecimiento natural sin perder tu expresión.</p>
+        <p>Dirigida por nuestra doctora. Líneas de expresión, definición del contorno facial, contorno de ojos y labios, grasa localizada, hiperhidrosis y revitalización capilar.</p>
+        <a href="paginas/medicina-estetica.html" class="pillar-link" data-ga="ver_medicina">Ver medicina estética <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= RESERVA ONLINE ================= -->
-<section id="reserva" class="reserva">
+<!-- ================= RESULTADOS / QUÉ ESPERAR ================= -->
+<section id="resultados" class="resultados">
   <div class="wrap">
-    <div class="reserva-grid">
-      <div data-reveal>
-        <div class="eyebrow">Sin llamadas, sin esperas</div>
-        <h2 style="margin-top:18px;font-size:clamp(28px,2.9vw,40px);font-weight:400;">Reserva tu cita en menos de un minuto</h2>
-        <p style="color:#5b5f57;font-weight:300;font-size:15.5px;margin-top:20px;max-width:440px;">Elige tratamiento, día y hora desde el móvil, a cualquier hora del día. Tu cita queda confirmada al instante y te avisamos antes de que llegue — sin colgar el teléfono, sin ida y vuelta de whatsapps.</p>
-        <ul class="reserva-list" data-reveal style="transition-delay:.1s">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Disponible 24 horas, también fuera de horario</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Recordatorio automático por SMS o email</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Cambia o cancela tu cita en un clic</li>
-        </ul>
-        <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:36px;">Ver horas disponibles</a>
-        <div class="powered-by">Sistema de reservas online por <a href="https://velsy.es" target="_blank" rel="noopener"><strong>Velsy</strong></a></div>
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Resultados</div>
+      <h2>Qué puedes esperar de cada tratamiento</h2>
+      <p>Trabajamos con objetivos realistas y te los explicamos antes de empezar: qué se puede conseguir, en cuántas sesiones orientativas y cómo se mantiene.</p>
+    </div>
+
+    <!-- TODO: galería antes / después con fotografías reales (con consentimiento del paciente).
+         Estructura sugerida por tarjeta: imagen antes → imagen después + tratamiento + nº sesiones + zona. -->
+
+    <div class="expect-grid" data-reveal>
+      <div class="expect">
+        <h3>Radiofrecuencia facial</h3>
+        <p style="font-size:13px;font-weight:300;color:#5b5f57;">Estimula la producción de colágeno para tensar la piel de forma progresiva.</p>
+        <div class="e-row"><span>Sesiones</span><span>6–10 orientativas</span></div>
+        <div class="e-row"><span>Objetivo</span><span>Firmeza y óvalo</span></div>
+        <div class="e-row"><span>Mantenimiento</span><span>1 sesión / 1–2 meses</span></div>
       </div>
+      <div class="expect">
+        <h3>Remodelación corporal</h3>
+        <p style="font-size:13px;font-weight:300;color:#5b5f57;">Radiofrecuencia y aparatología combinada sobre grasa localizada y flacidez.</p>
+        <div class="e-row"><span>Sesiones</span><span>8–12 orientativas</span></div>
+        <div class="e-row"><span>Objetivo</span><span>Contorno y firmeza</span></div>
+        <div class="e-row"><span>Mantenimiento</span><span>Según evolución</span></div>
+      </div>
+      <div class="expect">
+        <h3>Depilación láser</h3>
+        <p style="font-size:13px;font-weight:300;color:#5b5f57;">Reducción progresiva del vello adaptando parámetros a tu piel en cada sesión.</p>
+        <div class="e-row"><span>Sesiones</span><span>6–10 según zona</span></div>
+        <div class="e-row"><span>Objetivo</span><span>Reducción marcada</span></div>
+        <div class="e-row"><span>Mantenimiento</span><span>1–2 sesiones / año</span></div>
+      </div>
+    </div>
+    <p class="disclaimer" data-reveal>Los datos son orientativos. Cada plan se ajusta tras la valoración según tu piel, tu objetivo y tu respuesta al tratamiento.</p>
+    <div class="sec-cta" data-reveal>
+      <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_resultados">Quiero saber qué puedo conseguir</a>
+    </div>
+  </div>
+</section>
 
-      <div class="booking-card" data-reveal style="transition-delay:.15s">
-        <div class="booking-head">
-          <span>Reservar cita · Qualyderm</span>
-          <span class="booking-dot"></span>
-        </div>
-        <div class="booking-step">
-          <div class="booking-label">1. Elige tratamiento</div>
-          <div class="chip-row">
-            <button class="chip is-active">Tratamiento remodelador</button>
-            <button class="chip">Limpieza facial</button>
-            <button class="chip">Depilación láser</button>
-          </div>
-        </div>
-        <div class="booking-step">
-          <div class="booking-label">2. Elige día · Septiembre</div>
-          <div class="day-row">
-            <button class="day">
-              <span class="d">Lu</span><span class="n">1</span>
-            </button>
-            <button class="day">
-              <span class="d">Ma</span><span class="n">2</span>
-            </button>
-            <button class="day is-active">
-              <span class="d">Mi</span><span class="n">3</span>
-            </button>
-            <button class="day">
-              <span class="d">Ju</span><span class="n">4</span>
-            </button>
-            <button class="day">
-              <span class="d">Vi</span><span class="n">5</span>
-            </button>
-          </div>
-        </div>
-        <div class="booking-step">
-          <div class="booking-label">3. Elige hora</div>
-          <div class="time-row">
-            <button class="time">10:00</button>
-            <button class="time is-active">11:30</button>
-            <button class="time">13:00</button>
-            <button class="time">17:00</button>
-            <button class="time">18:30</button>
-            <button class="time">19:30</button>
-          </div>
-        </div>
-        <button class="btn btn-primary booking-confirm">Confirmar reserva</button>
+<!-- ================= MÉTODO QUALYDERM ================= -->
+<section id="metodo" class="metodo">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Cómo trabajamos</div>
+      <h2>El método Qualyderm</h2>
+      <p>No somos un centro que tiene muchos tratamientos. Somos un centro que sabe qué tratamiento necesitas — y te acompaña hasta el resultado.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal>
+        <div class="n">01</div>
+        <h3>Escuchamos</h3>
+        <p>Entendemos qué te gustaría mejorar y qué esperas conseguir, sin dar nada por hecho.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.08s">
+        <div class="n">02</div>
+        <h3>Valoramos</h3>
+        <p>Analizamos tu piel, tu rostro o tu cuerpo, y te explicamos qué es realista y qué no.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.16s">
+        <div class="n">03</div>
+        <h3>Diseñamos</h3>
+        <p>Seleccionamos el tratamiento o la combinación adecuada, con un plan de sesiones claro.</p>
+      </div>
+      <div class="step" data-reveal style="transition-delay:.24s">
+        <div class="n">04</div>
+        <h3>Acompañamos</h3>
+        <p>Seguimos tu evolución sesión a sesión y ajustamos el protocolo cuando hace falta.</p>
+      </div>
+    </div>
+    <div class="sec-cta" data-reveal>
+      <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_metodo">Empezar por una valoración</a>
+    </div>
+  </div>
+</section>
 
-        <div class="booking-confirmation" id="bookingConfirmation" aria-live="polite">
-          <svg class="bc-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3.2L16.5 9"/></svg>
-          <h4>¡Reserva confirmada!</h4>
-          <p class="bc-sub">Te hemos enviado un resumen a <strong>tu correo electrónico</strong>.</p>
-          <div class="bc-summary">
-            <div class="bc-row"><span>Servicio</span><span id="bcService">—</span></div>
-            <div class="bc-row bc-date"><span>Fecha</span><span id="bcDate">—</span></div>
-            <div class="bc-row"><span>Hora</span><span id="bcTime">—</span></div>
-          </div>
-          <button type="button" class="bc-again" id="bcAgain">Hacer otra reserva</button>
-          <p class="bc-powered">Powered by <a href="https://velsy.es" target="_blank" rel="noopener"><strong>velsy</strong></a></p>
-        </div>
+<!-- ================= TESTIMONIOS ================= -->
+<!-- TODO: sustituir los 3 testimonios por reseñas REALES de Google (texto + nombre/inicial + tratamiento)
+     y poner la puntuación y el nº de reseñas reales. Enlazar el botón a la ficha de Google del centro.
+     Mientras no haya reseñas reales verificables, se puede ocultar esta sección entera. -->
+<section id="opiniones" class="testi">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Opiniones</div>
+      <h2>Lo que dicen nuestros pacientes</h2>
+      <p>Reseñas verificadas de personas que ya han pasado por Qualyderm.</p>
+    </div>
+    <div class="testi-grid" data-reveal>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
+        <div class="who">— Nombre o inicial · Tratamiento</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
+        <div class="who">— Nombre o inicial · Tratamiento</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
+        <div class="who">— Nombre o inicial · Tratamiento</div>
+      </div>
+    </div>
+    <div class="testi-foot" data-reveal>
+      <div class="testi-score">4,X/5 <span>Puntuación en Google · pendiente de confirmar</span></div>
+      <a href="https://www.google.com/search?q=Qualyderm+medicina+estetica+opiniones" target="_blank" rel="noopener" class="btn btn-light" data-ga="ver_google">Ver reseñas en Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOSOTROS / EQUIPO ================= -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">25 años de experiencia acumulada</div>
+      <h2>Un equipo, tres especialidades</h2>
+      <p>Estética, medicina estética y cirugía plástica trabajan de forma conjunta para estudiar cada caso de manera particular y asesorarte hacia la mejor solución — nunca hacia la más rápida.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" data-reveal>
+        <!-- TODO: foto profesional real -->
+        <div class="team-photo"><span class="ph">Foto del profesional</span></div>
+        <div class="area">Área de estética</div>
+        <h4>Dirección técnica especialista</h4>
+        <p>Amplia trayectoria en estética avanzada, siempre a la búsqueda de la innovación, la tecnología y los activos más adecuados para cada cliente. Rigor y seriedad en cada tratamiento.</p>
+      </div>
+      <div class="team-card" data-reveal style="transition-delay:.1s">
+        <div class="team-photo"><span class="ph">Foto de la doctora</span></div>
+        <div class="area">Área médica</div>
+        <h4>Doctora en medicina estética</h4>
+        <p>Licenciada en Medicina y Cirugía. Formación en bases clínicas de medicina y cirugía cosmética y en medicina del envejecimiento. Pionera en técnicas de infiltración y rejuvenecimiento integral. <span style="color:#8a8d84;">(Añadir nombre y nº de colegiada.)</span></p>
+      </div>
+      <div class="team-card" data-reveal style="transition-delay:.2s">
+        <div class="team-photo"><span class="ph">Foto del cirujano</span></div>
+        <div class="area">Área de cirugía</div>
+        <h4>Cirujano plástico · SECPRE</h4>
+        <p>Especialista en cirugía plástica, estética y reparadora. Miembro de la Sociedad Española de Cirugía Plástica, Reparadora y Estética (SECPRE), con técnicas que minimizan la convalecencia post-operatoria. <span style="color:#8a8d84;">(Añadir nombre y nº de colegiado.)</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= LASER ================= -->
+<!-- ================= DEPILACIÓN LÁSER ================= -->
 <section id="laser" class="laser">
   <div class="wrap">
     <div class="laser-grid">
       <div class="laser-visual" data-reveal>
-        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=900&q=80" alt="Tratamiento de depilación láser en Qualyderm" loading="lazy">
+        <img src="assets/img/corporal-remodelador.jpg" alt="Tratamiento de depilación láser en Qualyderm" loading="lazy">
         <svg viewBox="0 0 200 200" fill="none">
           <circle cx="100" cy="100" r="30" stroke="#F3E4DD" stroke-width="1"/>
           <circle cx="100" cy="100" r="55" stroke="#F6F1E7" stroke-width="1" opacity=".5" stroke-dasharray="1 6"/>
@@ -533,99 +737,111 @@
       </div>
       <div class="laser-text">
         <div class="eyebrow" data-reveal>Depilación láser</div>
-        <div class="section-head" style="margin-bottom:26px;" data-reveal style="transition-delay:.08s">
-          <h2 style="margin-top:16px;">Único centro en la zona con sistema SFS</h2>
+        <div class="section-head" data-reveal style="margin-bottom:24px;transition-delay:.08s">
+          <h2 style="margin-top:16px;">Tecnología avanzada, adaptada a tu piel y tu vello</h2>
         </div>
-        <p data-reveal style="transition-delay:.14s">Trabajamos con un láser de diodo Atenea con sistema SFS y un láser IPL de última generación con sistema SHR: la combinación pensada para eliminar el folículo piloso sin dañar el tejido circundante, en cualquier fototipo y en cualquier estación del año.</p>
+        <p data-reveal style="transition-delay:.14s">Trabajamos con un láser de diodo Atenea con sistema SFS y un láser IPL de última generación con sistema SHR. La combinación permite ajustar los parámetros a cada fototipo y a cada zona para reducir el vello de forma progresiva cuidando la piel.</p>
         <ul class="laser-list" data-reveal style="transition-delay:.2s">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Eficaz en fototipos altos, piel bronceada y oscura</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Función antiséptica frente a foliculitis e infecciones</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Tratamiento eficaz para el hirsutismo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Apto durante todo el año, también en verano</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Parámetros adaptables a fototipos altos y piel bronceada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Indicado también en casos de foliculitis e hirsutismo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Valoración previa de la piel, sin coste ni compromiso</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Sesiones posibles durante todo el año siguiendo las pautas del centro</li>
         </ul>
+        <a href="#valoracion" class="btn btn-light" data-reveal style="transition-delay:.24s" data-ga="valoracion_laser">Quiero valorar mi depilación</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= EQUIPO ================= -->
-<section id="equipo">
+<!-- ================= VALORACIÓN GRATUITA (FORM) ================= -->
+<section id="valoracion" class="valoracion">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div class="eyebrow">25 años de experiencia acumulada</div>
-      <h2>Un equipo, tres especialidades</h2>
-      <p>Estética, medicina estética y cirugía plástica trabajan de forma conjunta para estudiar cada caso de manera particular y asesorarte hacia la mejor solución — nunca hacia la más rápida.</p>
-    </div>
-    <div class="equipo-banner" data-reveal>
-      <img src="https://images.unsplash.com/photo-1578747763484-51b21a33e4fa?auto=format&fit=crop&w=1600&q=80" alt="Cuidado de la piel en Qualyderm" loading="lazy">
-    </div>
-    <div class="team-grid">
-      <div class="team-card" data-reveal>
-        <svg class="ring-mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1"/><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1" opacity=".25"/></svg>
-        <div class="area">Área de estética</div>
-        <h4>Dirección técnica especialista</h4>
-        <p>Amplia trayectoria en estética avanzada, siempre a la búsqueda de la innovación, la tecnología y los activos más adecuados para cada cliente. Rigor y seriedad en cada tratamiento, como si fuese el único.</p>
+    <div class="valoracion-grid">
+      <div class="intro" data-reveal>
+        <div class="eyebrow">Valoración gratuita</div>
+        <h2>¿No sabes qué tratamiento necesitas?</h2>
+        <p>Te ayudamos a encontrarlo. Cuéntanos qué te gustaría mejorar y nuestro equipo estudia tu caso — sin presión y sin letra pequeña.</p>
+        <div class="trust-row">
+          <div>Te contactamos lo antes posible</div>
+          <div>Primera valoración sin compromiso</div>
+        </div>
       </div>
-      <div class="team-card" data-reveal style="transition-delay:.1s">
-        <svg class="ring-mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1"/><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1" opacity=".25"/></svg>
-        <div class="area">Área médica</div>
-        <h4>Doctora en medicina estética</h4>
-        <p>Licenciada en Medicina y Cirugía. Diplomada en bases clínicas de medicina y cirugía cosmética, y en medicina del envejecimiento. Pionera en técnicas de infiltración y rejuvenecimiento integral.</p>
+      <div class="form-card" data-reveal style="transition-delay:.1s">
+        <h3>Solicita tu valoración</h3>
+        <div class="sub">Rellena estos datos y te llamamos nosotros.</div>
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label>¿Qué te gustaría mejorar?</label>
+            <div class="chip-row" id="prefChips">
+              <button type="button" class="chip">Rostro</button>
+              <button type="button" class="chip">Cuerpo</button>
+              <button type="button" class="chip">Depilación</button>
+              <button type="button" class="chip">Medicina estética</button>
+              <button type="button" class="chip">No estoy seguro/a</button>
+            </div>
+          </div>
+          <div class="field"><label>Nombre</label><input type="text" name="nombre" required placeholder="Tu nombre"></div>
+          <div class="field"><label>Teléfono / WhatsApp</label><input type="tel" name="telefono" required placeholder="6XX XXX XXX"></div>
+          <div class="field-check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="https://qualyderm.es/avisos-legales/" target="_blank" rel="noopener" style="text-decoration:underline;">política de privacidad</a>.</span></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;" data-ga="form_submit">Quiero que me asesoréis</button>
+          <div class="form-status" id="formStatus"></div>
+          <div class="form-alt">¿Prefieres escribirnos ahora? <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20en%20Qualyderm" target="_blank" rel="noopener" data-ga="whatsapp_form">Escríbenos por WhatsApp</a></div>
+        </form>
       </div>
-      <div class="team-card" data-reveal style="transition-delay:.2s">
-        <svg class="ring-mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1"/><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1" opacity=".5"/><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1" opacity=".25"/></svg>
-        <div class="area">Área de cirugía</div>
-        <h4>Cirujano plástico · SECPRE</h4>
-        <p>Considerado uno de los mejores de Madrid en su especialidad. Miembro de la Sociedad Española de Cirujanos Plásticos y Reparadores Estéticos, con técnicas que minimizan la convalecencia post-operatoria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVA ONLINE (VELSY REAL) ================= -->
+<section id="reserva" class="reserva">
+  <div class="wrap">
+    <div class="reserva-grid">
+      <div class="r-copy" data-reveal>
+        <div class="eyebrow">Ya sé lo que quiero</div>
+        <h2>Reserva tu cita online</h2>
+        <p>Si ya tienes claro tu tratamiento, elige profesional, día y hora en nuestro sistema de reservas. Confirmación al instante y recordatorio antes de la cita.</p>
+        <ul class="reserva-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Disponible 24 horas, también fuera de horario</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Recordatorio automático por SMS o email</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Cambia o cancela tu cita en un clic</li>
+        </ul>
+        <div class="powered-by">Sistema de reservas online por <a href="https://velsy.es" target="_blank" rel="noopener"><strong>Velsy</strong></a></div>
+      </div>
+
+      <div class="reserva-card" data-reveal style="transition-delay:.12s">
+        <div class="eyebrow">Reservar cita</div>
+        <h3>En menos de un minuto</h3>
+        <p>Te abrimos la agenda de Qualyderm en una pestaña nueva.</p>
+        <ol>
+          <li>Elige el tratamiento</li>
+          <li>Elige profesional, día y hora</li>
+          <li>Confirma con tus datos</li>
+        </ol>
+        <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" class="btn btn-light" target="_blank" rel="noopener" style="width:100%;" data-ga="reservar_seccion">Ver horarios disponibles</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= REGALO + TOLERANCIA ================= -->
-<section style="padding-top:0;">
+<section>
   <div class="wrap">
+    <div class="section-head centered" data-reveal>
+      <div class="eyebrow">Además</div>
+      <h2>Ventajas para nuestros pacientes</h2>
+    </div>
     <div class="strip">
       <div class="strip-card gift" data-reveal>
         <div class="eyebrow">Fidelidad</div>
         <h3>Tu cumpleaños, nuestro regalo</h3>
-        <p>Premiamos tu fidelidad con un tratamiento a elegir, en tu mes de cumpleaños. Tienes 30 días desde tu fecha para escoger el tratamiento y concretar la cita.</p>
+        <p>Premiamos tu fidelidad con un tratamiento a elegir en tu mes de cumpleaños. Tienes 30 días desde tu fecha para escogerlo y concretar la cita.</p>
         <a href="https://qualyderm.es/regala-salud-belleza/" class="btn btn-ghost" style="align-self:flex-start;">Descubre el regalo</a>
       </div>
       <div class="strip-card tolerance" data-reveal style="transition-delay:.1s">
         <div class="eyebrow">Sin compromiso</div>
         <h3>Test de tolerancia gratuito</h3>
-        <p>Antes de cualquier tratamiento de depilación láser, comprobamos cómo responde tu piel. Sin coste, sin compromiso, con toda la información antes de decidir.</p>
-        <a href="#consulta" class="btn btn-ghost" style="align-self:flex-start;">Solicitar test</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONSULTA / FORM ================= -->
-<section id="consulta" class="consulta">
-  <div class="wrap">
-    <div class="consulta-grid">
-      <div data-reveal>
-        <div class="eyebrow">Primera consulta gratuita</div>
-        <h2 style="margin-top:16px;font-size:clamp(28px,3vw,40px);">Hablemos de tu piel, sin compromiso</h2>
-        <p style="color:#4b5049;font-size:16px;margin-top:18px;max-width:440px;">Cuéntanos qué te preocupa y qué te gustaría conseguir. Nuestro equipo médico y estético estudiará tu caso y te propondrá el camino más adecuado — sin presión, sin letra pequeña.</p>
-        <div class="trust-row" style="margin-top:36px;border-top:none;padding-top:0;">
-          <div>Respuesta en 24–48h</div>
-          <div>Sin compromiso de compra</div>
-        </div>
-      </div>
-      <div class="form-card" data-reveal style="transition-delay:.1s">
-        <h3>Solicita tu consulta gratuita</h3>
-        <div class="sub">Te contactamos en menos de 48 horas</div>
-        <form onsubmit="event.preventDefault(); this.reset(); alert('Gracias — te contactaremos muy pronto.');">
-          <div class="field"><label>Nombre</label><input type="text" required placeholder="Tu nombre"></div>
-          <div class="field"><label>Email</label><input type="email" required placeholder="tu@email.com"></div>
-          <div class="field"><label>Teléfono</label><input type="tel" placeholder="6XX XXX XXX"></div>
-          <div class="field"><label>Mensaje</label><textarea rows="3" placeholder="Cuéntanos qué te gustaría tratar..."></textarea></div>
-          <div class="field-check"><input type="checkbox" required><span>He leído y acepto la <a href="https://qualyderm.es/avisos-legales/" style="text-decoration:underline;">política de privacidad</a></span></div>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Enviar solicitud</button>
-        </form>
+        <p>Antes de cualquier tratamiento de depilación láser comprobamos cómo responde tu piel. Sin coste y con toda la información antes de decidir.</p>
+        <a href="#valoracion" class="btn btn-ghost" style="align-self:flex-start;">Solicitar test</a>
       </div>
     </div>
   </div>
@@ -642,19 +858,26 @@
       <div class="contact-item">
         <div class="lbl">Dirección</div>
         <div class="val">Calle Julio Rey Pastor, Madrid</div>
+        <small><a href="https://www.google.com/maps/dir/?api=1&destination=Qualyderm+Calle+Julio+Rey+Pastor+Madrid" target="_blank" rel="noopener" data-ga="como_llegar">Cómo llegar →</a></small>
       </div>
       <div class="contact-item">
         <div class="lbl">Teléfono</div>
-        <div class="val">914 33 40 65 · 635 82 96 74</div>
+        <div class="val"><a href="tel:+34914334065">914 33 40 65</a></div>
+        <small><a href="https://wa.me/34635829674" target="_blank" rel="noopener" data-ga="whatsapp_contacto">WhatsApp: 635 82 96 74</a></small>
       </div>
       <div class="contact-item">
         <div class="lbl">Email</div>
-        <div class="val">info@qualyderm.es</div>
+        <div class="val"><a href="mailto:info@qualyderm.es">info@qualyderm.es</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="lbl">Horario</div>
+        <div class="val">Lunes a viernes</div>
+        <small>Añadir franjas horarias reales</small>
       </div>
     </div>
   </div>
   <div class="map-embed">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1277.3407978082305!2d-3.677033951950564!3d40.40784214059288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b2bd8ff80e8b80!2sQualyderm!5e0!3m2!1ses!2ses!4v1554232898763!5m2!1ses!2ses" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1277.3407978082305!2d-3.677033951950564!3d40.40784214059288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3b2bd8ff80e8b80!2sQualyderm!5e0!3m2!1ses!2ses!4v1554232898763!5m2!1ses!2ses" loading="lazy" title="Ubicación de Qualyderm en Madrid"></iframe>
   </div>
 </section>
 
@@ -680,116 +903,145 @@
           <a href="paginas/estetica-corporal.html">Estética corporal</a>
           <a href="paginas/medicina-estetica.html">Medicina estética</a>
           <a href="#laser">Depilación láser</a>
-          <a href="#equipo">Equipo</a>
+          <a href="#metodo">Método Qualyderm</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#nosotros">Nosotros</a>
         </div>
         <div class="fcol">
           <h5>Centro</h5>
           <a href="#contacto">Calle Julio Rey Pastor, Madrid</a>
-          <a href="tel:914334065">914 33 40 65</a>
+          <a href="tel:+34914334065">914 33 40 65</a>
+          <a href="https://wa.me/34635829674" target="_blank" rel="noopener">WhatsApp</a>
           <a href="mailto:info@qualyderm.es">info@qualyderm.es</a>
+        </div>
+        <div class="fcol">
+          <h5>Reservas</h5>
+          <a href="#valoracion">Valoración gratuita</a>
+          <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" target="_blank" rel="noopener">Reservar cita online</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 Qualyderm — Centro de medicina y estética, zona Retiro, Madrid</div>
+      <div>© 2026 Qualyderm — Centro de medicina y estética, zona Retiro, Madrid ·
+        <a href="https://qualyderm.es/avisos-legales/" target="_blank" rel="noopener" style="text-decoration:underline;">Avisos legales</a></div>
       <div class="socials">
-        <a href="https://www.facebook.com/qualyderm.medicinaestetica" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="https://twitter.com/qualyderm" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        <a href="https://www.facebook.com/qualyderm.medicinaestetica" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- ================= BARRA FIJA MÓVIL ================= -->
+<div class="mobilebar">
+  <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20un%20tratamiento%20en%20Qualyderm" target="_blank" rel="noopener" class="mb-wa" data-ga="whatsapp_barra">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.7-1.1-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5-.3.3c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338" target="_blank" rel="noopener" class="mb-book" data-ga="reservar_barra">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+    Reservar
+  </a>
+</div>
+
 <script>
-  // header scroll state
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 40);
+  var VELSY = 'https://app.velsy.es/book/ba762658-797d-455d-8800-3e0662242338';
+  var WA = '34635829674';
+  // Endpoint del formulario (Formspree / Getform / webhook). Vacío = solo WhatsApp.
+  var FORM_ENDPOINT = '';
+
+  // ---- analítica: envía evento si gtag está cargado ----
+  function track(name, params){
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+  document.querySelectorAll('[data-ga]').forEach(function(el){
+    el.addEventListener('click', function(){ track(el.getAttribute('data-ga')); });
   });
 
-  // reveal on scroll
-  const revealEls = document.querySelectorAll('[data-reveal]');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
-  }, {threshold:.15});
-  revealEls.forEach(el => io.observe(el));
+  // ---- header scroll ----
+  var header = document.getElementById('siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 40); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 
-  // count-up stats
-  const counters = document.querySelectorAll('[data-count]');
-  const cio = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const el = entry.target;
-        const target = parseInt(el.getAttribute('data-count'));
-        const suffix = el.getAttribute('data-suffix') || '';
-        let cur = 0;
-        const step = Math.max(1, Math.round(target/28));
-        const isCm = suffix.includes('cm');
-        const timer = setInterval(() => {
-          cur += step;
-          if(cur >= target){ cur = target; clearInterval(timer); }
-          el.textContent = cur + (isCm ? 'cm' : '%');
-          if(cur === target){ el.textContent = target + suffix; }
-        }, 28);
-        cio.unobserve(el);
-      }
-    });
-  }, {threshold:.5});
-  counters.forEach(c => cio.observe(c));
+  // ---- reveal on scroll ----
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, {threshold:.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
 
-  // menú móvil
-  const burger = document.getElementById('burger');
-  const mainnav = document.getElementById('mainnav');
-  if(burger && mainnav){
-    burger.addEventListener('click', () => {
-      const open = mainnav.classList.toggle('is-open');
+  // ---- menú móvil ----
+  var burger = document.getElementById('burger');
+  var mainnav = document.getElementById('mainnav');
+  if (burger && mainnav) {
+    var closeNav = function(){
+      mainnav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    };
+    burger.addEventListener('click', function(){
+      var open = mainnav.classList.toggle('is-open');
       burger.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    // cerrar al pulsar un enlace del menú
-    mainnav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mainnav.classList.remove('is-open');
-        burger.classList.remove('is-open');
-        burger.setAttribute('aria-expanded', 'false');
-      });
-    });
+    mainnav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeNav); });
   }
 
-  // booking widget demo (Velsy)
-  function wireGroup(selector){
-    document.querySelectorAll(selector).forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll(selector).forEach(b => b.classList.remove('is-active'));
+  // ---- chips "¿qué te gustaría mejorar?" (selección única) ----
+  var prefChips = document.getElementById('prefChips');
+  if (prefChips) {
+    prefChips.querySelectorAll('.chip').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        prefChips.querySelectorAll('.chip').forEach(function(b){ b.classList.remove('is-active'); });
         btn.classList.add('is-active');
       });
     });
   }
-  wireGroup('.chip');
-  wireGroup('.day');
-  wireGroup('.time');
 
-  const confirmBtn = document.querySelector('.booking-confirm');
-  const confirmation = document.getElementById('bookingConfirmation');
-  if(confirmBtn && confirmation){
-    const WEEKDAYS = {Lu:'lunes', Ma:'martes', Mi:'miércoles', Ju:'jueves', Vi:'viernes'};
-    confirmBtn.addEventListener('click', () => {
-      const service = document.querySelector('.chip.is-active');
-      const day = document.querySelector('.day.is-active');
-      const time = document.querySelector('.time.is-active');
-      if(service) document.getElementById('bcService').textContent = service.textContent.trim();
-      if(day){
-        const wd = WEEKDAYS[day.querySelector('.d').textContent.trim()] || '';
-        const n = day.querySelector('.n').textContent.trim();
-        document.getElementById('bcDate').textContent = `${wd}, ${n} de septiembre`;
+  // ---- formulario de valoración: envía al endpoint (si hay) + abre WhatsApp ----
+  var form = document.getElementById('leadForm');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var status = document.getElementById('formStatus');
+      var nombre = form.nombre.value.trim();
+      var telefono = form.telefono.value.trim();
+      var acepta = form.privacidad.checked;
+      var pref = prefChips && prefChips.querySelector('.chip.is-active');
+      pref = pref ? pref.textContent.trim() : 'Sin especificar';
+
+      if (!nombre || !telefono || !acepta) {
+        status.textContent = 'Completa nombre, teléfono y acepta la política de privacidad.';
+        status.classList.add('show');
+        return;
       }
-      if(time) document.getElementById('bcTime').textContent = time.textContent.trim();
-      confirmation.classList.add('is-shown');
+
+      track('generate_lead', { area: pref });
+
+      // 1) Enviar al endpoint si está configurado
+      if (FORM_ENDPOINT) {
+        fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nombre: nombre, telefono: telefono, area: pref, origen: 'web qualyderm' })
+        }).catch(function(){});
+      }
+
+      // 2) Abrir WhatsApp con el resumen (llega siempre)
+      var msg = 'Hola, soy ' + nombre + '. Me gustaría una valoración en Qualyderm.\n'
+              + 'Área de interés: ' + pref + '\n'
+              + 'Teléfono: ' + telefono;
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+
+      form.reset();
+      prefChips && prefChips.querySelectorAll('.chip').forEach(function(b){ b.classList.remove('is-active'); });
+      status.textContent = '¡Gracias! Te hemos abierto WhatsApp para terminar. Si no, te llamamos nosotros.';
+      status.classList.add('show');
     });
-  }
-  const bcAgain = document.getElementById('bcAgain');
-  if(bcAgain && confirmation){
-    bcAgain.addEventListener('click', () => confirmation.classList.remove('is-shown'));
   }
 </script>
 
