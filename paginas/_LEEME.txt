@@ -1,0 +1,12 @@
+Páginas interiores de Qualyderm.
+
+HECHAS:
+- estetica-facial.html
+- estetica-corporal.html
+- medicina-estetica.html
+
+Comparten estilo con ../assets/css/interior.css y ../assets/js/interior.js
+(reutilizan paleta, header y footer de ../index.html).
+
+PENDIENTES: depilacion-laser.html, equipo.html, contacto.html
+Ver README.md en la raíz.

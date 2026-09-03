@@ -1,0 +1,32 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editores / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Claude Code (config local de la máquina)
+.claude/
+
+# Documentación privada (contratos, etc.) — no publicar
+DOCUMENTACION/
+WhatsApp Image*
+*.docx.pdf
+
+# Temporales
+*.log
+*.tmp
+*.bak
+__preview.html
+__p.html
+__d.html
+__m.html
+
+# Dependencias (por si se añaden al tema WordPress)
+node_modules/
+vendor/
