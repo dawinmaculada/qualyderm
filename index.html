@@ -78,7 +78,7 @@
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
     font-family:'Work Sans',sans-serif;
     font-weight:300;
@@ -98,16 +98,16 @@
   .eyebrow{
     font-family:'Work Sans',sans-serif;
     font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;
-    color:var(--bronce);display:flex;align-items:center;gap:12px;
+    color:var(--bronce);display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   }
   .eyebrow::before{content:'';width:22px;height:1px;background:var(--bronce);flex-shrink:0;}
 
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    padding:15px 32px;border-radius:1px;font-family:'Work Sans',sans-serif;
-    font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+    padding:15px 30px;border-radius:1px;font-family:'Work Sans',sans-serif;
+    font-weight:500;font-size:13px;line-height:1.35;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;
     border:1px solid transparent;transition:all .45s cubic-bezier(.4,0,.2,1);
-    white-space:nowrap;text-align:center;
+    text-align:center;max-width:100%;
   }
   .btn-primary{background:var(--verde);color:var(--marfil);}
   .btn-primary:hover{background:var(--verde-2);box-shadow:0 18px 34px -18px rgba(30,50,38,.45);}
@@ -406,13 +406,18 @@
     .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
     .pillar,.team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
     .pillar:first-child,.team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
-    .metodo .step{border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:30px;margin-top:2px;}
+    .metodo .step{border-left:none;padding:30px 0 0;border-top:1px solid var(--linea);margin-top:2px;}
     .metodo .step:first-child{border-top:none;}
+    .strip-card{padding:42px 30px;}
     .strip-card.gift{border-right:none;border-bottom:1px solid var(--linea);}
+    .laser-grid{gap:44px;}
     .laser-visual{aspect-ratio:16/9;}
     .laser-list{grid-template-columns:1fr;}
     .valoracion-grid{gap:44px;}
     .form-card{padding:34px 26px;}
+    .reserva-grid{gap:40px;}
+    .reserva-card{padding:38px 28px;}
+    .section-head h2,.reserva h2,.valoracion-grid .intro h2{font-size:clamp(26px,5vw,34px);}
 
     .mobilebar{
       display:flex;position:fixed;left:0;right:0;bottom:0;z-index:900;
@@ -425,16 +430,44 @@
     footer{padding-bottom:88px;}
   }
   @media (max-width:600px){
-    .wrap{padding:0 20px;}
+    .wrap{padding:0 18px;}
     .header-right .btn{display:none;}
-    .hero-copy h1{font-size:clamp(28px,7vw,40px);}
-    .hero-ctas .btn,.sec-cta .btn{width:100%;}
-    .sec-cta{flex-direction:column;}
+    section{padding:66px 0;}
+    .section-head{margin-bottom:40px;}
+
+    /* eyebrows: menos tracking y que puedan romper en 2 líneas */
+    .eyebrow{font-size:10px;letter-spacing:.14em;gap:9px;}
+    .hero-copy .eyebrow{display:block;text-align:center;}
+    .hero-copy .eyebrow::before{display:none;}
+
+    .hero{padding-top:104px;}
+    .hero-copy{margin-bottom:30px;}
+    .hero-copy h1{font-size:clamp(26px,7.6vw,38px);margin:14px 0 16px;}
+    .hero-copy .lede{font-size:14.5px;}
+    .hero-figure img{aspect-ratio:4/5;object-position:58% 44%;}
+
+    /* botones: ocupan el ancho y su texto envuelve sin desbordar */
+    .btn{padding:14px 18px;font-size:12px;letter-spacing:.05em;width:100%;}
+    .hero-ctas,.sec-cta{flex-direction:column;gap:12px;width:100%;}
+    .hero-ctas .btn,.sec-cta .btn,.laser-text .btn,.testi-foot .btn,.strip-card .btn{width:100%;}
+    .strip-card .btn{align-self:stretch!important;}
+
     .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr;}
-    .router-grid a{border-right:none;border-bottom:1px solid var(--linea);}
+    .router-grid a{border-right:none;border-bottom:1px solid var(--linea);padding:30px 22px;}
     .router-grid a:last-child{border-bottom:none;}
-    .contact-item{border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:28px;}
+    .expect{padding:26px 22px;}
+    .testi-grid{gap:16px;}
+    .testi-card{padding:26px 22px;}
+    .testi-foot{gap:16px;}
+    .strip-card{padding:36px 24px;}
+    .form-card{padding:28px 20px;}
+    .reserva-card{padding:32px 24px;}
+    .valoracion-grid .intro .trust-row{margin-top:26px;}
+    .trust-row{gap:10px 22px;}
+
+    .contact-item{border-left:none;padding:28px 0 0;border-top:1px solid var(--linea);}
     .contact-item:first-child{border-top:none;padding-top:0;}
+    footer .fcols{gap:32px 48px;}
   }
 </style>
 </head>
