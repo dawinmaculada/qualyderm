@@ -74,7 +74,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;posit
 .logo-text .name{font-family:'Fraunces',serif;font-size:22px;color:var(--verde);letter-spacing:.01em;}
 .logo-text .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);margin-top:3px;}
 
-nav.mainnav{display:flex;align-items:center;gap:36px;}
+nav.mainnav{display:flex;align-items:center;gap:30px;}
 nav.mainnav a{font-size:14px;font-weight:500;color:var(--verde);position:relative;padding:4px 0;}
 nav.mainnav>a::after,.dropdown-toggle::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--bronce);transition:width .3s ease;}
 nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100%;}
@@ -168,9 +168,54 @@ footer .fcol a:hover{color:var(--marfil);}
 .socials a{width:34px;height:34px;border:1px solid rgba(246,241,231,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .socials a:hover{border-color:var(--bronce-luz);color:var(--bronce-luz);}
 
+/* ---------- trabaja con nosotros / formulario ---------- */
+.join{background:var(--marfil-2);padding:110px 0 130px;}
+.join-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start;}
+.join-grid .intro h2{font-size:clamp(24px,2.8vw,34px);margin-top:14px;font-weight:400;}
+.join-grid .intro p{color:#4b5049;font-size:15.5px;font-weight:300;margin-top:18px;max-width:440px;}
+.join-points{margin-top:34px;display:flex;flex-direction:column;gap:16px;}
+.join-points li{display:flex;gap:13px;font-size:14px;font-weight:300;color:#4b5049;align-items:flex-start;}
+.join-points li svg{width:16px;height:16px;flex-shrink:0;margin-top:3px;color:var(--bronce);}
+.join-wa{margin-top:34px;}
+.join-wa .btn svg{width:16px;height:16px;}
+
+.form-card{background:var(--blanco);padding:46px;border-radius:1px;box-shadow:var(--sombra);}
+.form-card h3{font-size:20px;margin-bottom:6px;font-weight:400;}
+.form-card .sub{color:#5b5f57;font-weight:300;font-size:13.5px;margin-bottom:28px;}
+.field{margin-bottom:20px;}
+.field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--verde-2);font-weight:500;margin-bottom:11px;}
+.field input,.field textarea{
+  width:100%;border:none;border-bottom:1px solid rgba(30,50,38,.2);background:transparent;
+  padding:10px 2px;font-family:'Work Sans',sans-serif;font-weight:300;font-size:14.5px;color:var(--carbon);
+  transition:border-color .3s ease;
+}
+.field textarea{resize:vertical;min-height:88px;line-height:1.6;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--bronce);}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:400;padding:9px 15px;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
+.chip.is-active,.chip:hover{border-color:var(--verde);background:var(--verde);color:var(--marfil);}
+.field-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;font-weight:300;color:#5b5f57;margin:6px 0 26px;}
+.field-check input{margin-top:3px;width:auto;}
+.form-alt{margin-top:16px;text-align:center;font-size:12.5px;font-weight:300;color:#8a8d84;}
+.form-alt a{color:#25623b;font-weight:600;border-bottom:1px solid transparent;transition:border-color .3s ease;}
+.form-alt a:hover{border-color:currentColor;}
+.form-status{margin-top:14px;font-size:13px;font-weight:400;color:var(--verde-2);display:none;}
+.form-status.show{display:block;}
+
 /* ---------- responsive ---------- */
+@media (max-width:1200px) and (min-width:981px){
+  nav.mainnav{gap:20px;}
+  nav.mainnav>a,.dropdown-toggle{font-size:13px;}
+  .header-right{gap:16px;}
+}
 @media (max-width:1080px){
   .treat-grid{grid-template-columns:1fr 1fr;}
+  .join-grid{gap:48px;}
+}
+@media (max-width:860px){
+  .join{padding:76px 0 88px;}
+  .join-grid{grid-template-columns:1fr;gap:44px;}
+  .form-card{padding:34px 26px;}
 }
 @media (max-width:980px){
   .burger{display:flex;}
@@ -213,4 +258,7 @@ footer .fcol a:hover{color:var(--marfil);}
   .page-hero .hero-ctas,.cta-band .btns{flex-direction:column;gap:12px;width:100%;}
   .page-hero .hero-ctas .btn,.cta-band .btns .btn{width:100%;}
   .cta-band .cta-powered{margin-top:22px;}
+  .join{padding:64px 0 76px;}
+  .form-card{padding:28px 20px;}
+  .join-wa .btn{width:100%;}
 }
