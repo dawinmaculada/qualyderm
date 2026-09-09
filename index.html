@@ -253,12 +253,27 @@
   .resultados .disclaimer{margin-top:26px;font-size:12px;font-weight:300;color:#8a8d84;max-width:640px;}
 
   /* ---------- método qualyderm ---------- */
-  .metodo .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--linea);}
-  .metodo .step{padding:38px 30px 0 0;border-left:1px solid var(--linea);padding-left:30px;}
-  .metodo .step:first-child{border-left:none;padding-left:0;}
-  .metodo .step .n{font-family:'Fraunces',serif;font-size:15px;font-style:italic;color:var(--rosa);letter-spacing:.05em;}
-  .metodo .step h3{font-size:18px;font-weight:500;margin:14px 0 10px;letter-spacing:.02em;text-transform:uppercase;}
-  .metodo .step p{font-size:13.5px;font-weight:300;color:#5b5f57;}
+  .metodo{background:var(--marfil-2);}
+  .metodo .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  .metodo .step{position:relative;}
+  .metodo .step .n{
+    width:44px;height:44px;border-radius:50%;background:var(--blanco);border:1px solid var(--linea);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:17px;font-style:italic;color:var(--bronce);
+    margin-bottom:20px;position:relative;z-index:1;
+  }
+  .metodo .steps .step:not(:last-child)::after{
+    content:'';position:absolute;top:22px;left:58px;right:-16px;height:1px;
+    background:repeating-linear-gradient(to right,var(--rosa) 0 3px,transparent 3px 8px);
+  }
+  .metodo .step h3{font-size:16px;font-weight:600;margin:0 0 9px;letter-spacing:0;text-transform:none;}
+  .metodo .step p{font-size:13px;font-weight:300;color:#5b5f57;line-height:1.62;}
+  .metodo-promesa{margin-top:60px;max-width:720px;padding:32px 38px;background:var(--blanco);border-left:2px solid var(--rosa);border-radius:2px;}
+  .metodo-promesa p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:18.5px;line-height:1.52;color:var(--verde);}
+  .metodo-promesa .mp-firma{margin-top:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce);font-weight:600;}
+  .metodo-trust{display:grid;grid-template-columns:1fr 1fr;gap:15px 40px;margin-top:36px;max-width:720px;}
+  .metodo-trust li{display:flex;align-items:flex-start;gap:11px;font-size:13.5px;font-weight:400;color:var(--carbon);line-height:1.5;}
+  .metodo-trust li svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;color:var(--verde);}
 
   /* ---------- testimonios ---------- */
   .testi{background:var(--verde);color:var(--marfil);}
@@ -438,8 +453,8 @@
     .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
     .team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
     .team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
-    .metodo .step{border-left:none;padding:30px 0 0;border-top:1px solid var(--linea);margin-top:2px;}
-    .metodo .step:first-child{border-top:none;}
+    .metodo .steps{gap:34px 28px;}
+    .metodo .steps .step:not(:last-child)::after{display:none;}
     .strip-card{padding:42px 30px;}
     .strip-card.gift{border-right:none;border-bottom:1px solid var(--linea);}
     .laser-grid{gap:44px;}
@@ -484,7 +499,9 @@
     .hero-ctas .btn,.sec-cta .btn,.laser-cta .btn,.router-actions .btn,.testi-foot .btn,.strip-card .btn{width:100%;}
     .strip-card .btn{align-self:stretch!important;}
 
-    .pillars,.router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr;}
+    .pillars,.router-grid,.expect-grid,.metodo .steps,.metodo-trust,.testi-grid,.contact-info{grid-template-columns:1fr;}
+    .metodo-promesa{padding:26px 24px;}
+    .metodo-promesa p{font-size:17px;}
     .pillar{padding:0!important;border-left:none!important;}
     .pillar:nth-child(n+2){border-top:1px solid var(--linea);padding-top:36px!important;margin-top:36px;}
     .pillar-img{height:220px;}
@@ -707,32 +724,46 @@
     <div class="section-head" data-reveal>
       <div class="eyebrow">Cómo trabajamos</div>
       <h2>El método Qualyderm</h2>
-      <p>No somos un centro que tiene muchos tratamientos. Somos un centro que sabe qué tratamiento necesitas — y te acompaña hasta el resultado.</p>
+      <p>No somos un centro con muchos tratamientos. Somos el centro que se sienta contigo, entiende qué necesitas de verdad y te acompaña hasta el final — con calma y sin venderte de más.</p>
     </div>
     <div class="steps">
       <div class="step" data-reveal>
-        <div class="n">01</div>
-        <h3>Escuchamos</h3>
-        <p>Entendemos qué te gustaría mejorar y qué esperas conseguir, sin dar nada por hecho.</p>
+        <div class="n">1</div>
+        <h3>Nos sentamos contigo</h3>
+        <p>Sin prisa. Nos cuentas qué te gustaría mejorar y qué esperas conseguir, y nosotros escuchamos antes de proponer nada.</p>
       </div>
       <div class="step" data-reveal style="transition-delay:.08s">
-        <div class="n">02</div>
-        <h3>Valoramos</h3>
-        <p>Analizamos tu piel, tu rostro o tu cuerpo, y te explicamos qué es realista y qué no.</p>
+        <div class="n">2</div>
+        <h3>Valoramos tu caso</h3>
+        <p>Miramos tu piel, tu rostro o tu cuerpo y te contamos con sinceridad qué es realista, qué no y por dónde empezar.</p>
       </div>
       <div class="step" data-reveal style="transition-delay:.16s">
-        <div class="n">03</div>
-        <h3>Diseñamos</h3>
-        <p>Seleccionamos el tratamiento o la combinación adecuada, con un plan de sesiones claro.</p>
+        <div class="n">3</div>
+        <h3>Diseñamos tu plan</h3>
+        <p>Un plan a tu medida, con las sesiones que de verdad hacen falta y el precio claro desde el principio.</p>
       </div>
       <div class="step" data-reveal style="transition-delay:.24s">
-        <div class="n">04</div>
-        <h3>Acompañamos</h3>
-        <p>Seguimos tu evolución sesión a sesión y ajustamos el protocolo cuando hace falta.</p>
+        <div class="n">4</div>
+        <h3>Te acompañamos</h3>
+        <p>Seguimos tu evolución sesión a sesión, ajustamos lo que haga falta y seguimos a tu lado cuando termina el tratamiento.</p>
       </div>
     </div>
+
+    <div class="metodo-promesa" data-reveal>
+      <p>Preferimos que vengas una vez y te vayas con las ideas claras, aunque no sea tu momento de empezar. Y si un tratamiento no te conviene, te lo decimos.</p>
+      <div class="mp-firma">— El equipo de Qualyderm</div>
+    </div>
+
+    <ul class="metodo-trust" data-reveal>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Te atiende siempre un profesional del equipo, nunca un comercial</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Equipo médico y estético propio, bajo un mismo criterio</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Sin paquetes cerrados ni permanencias</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>El seguimiento va incluido: no acaba en la última sesión</li>
+    </ul>
+
     <div class="sec-cta" data-reveal>
       <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_metodo">Empezar por una valoración</a>
+      <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20que%20me%20orient%C3%A9is%20sobre%20un%20tratamiento%20en%20Qualyderm" target="_blank" rel="noopener" class="btn btn-ghost" data-ga="whatsapp_metodo">Preguntar por WhatsApp</a>
     </div>
   </div>
 </section>
