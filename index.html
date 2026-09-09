@@ -269,14 +269,26 @@
   .testi .eyebrow{color:var(--rosa-suave);}
   .testi .eyebrow::before{background:var(--rosa-suave);}
   .testi .section-head h2{color:var(--marfil);}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .testi-card{border:1px solid rgba(246,241,231,.18);padding:32px 28px;display:flex;flex-direction:column;gap:16px;border-radius:1px;}
+  .testi-carousel{position:relative;}
+  .testi-track{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;}
+  .testi-track::-webkit-scrollbar{display:none;}
+  .testi-card{
+    flex:0 0 min(360px,82vw);scroll-snap-align:start;
+    border:1px solid rgba(246,241,231,.18);border-radius:2px;background:rgba(255,255,255,.02);
+    padding:30px 30px;display:flex;flex-direction:column;gap:15px;
+  }
   .testi-stars{color:var(--bronce-luz);letter-spacing:3px;font-size:13px;}
-  .testi-card p{font-weight:300;font-size:14px;color:rgba(251,249,245,.85);}
-  .testi-card .who{margin-top:auto;font-size:12px;color:rgba(251,249,245,.55);letter-spacing:.04em;}
-  .testi-foot{margin-top:44px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .testi-card p{font-weight:300;font-size:14px;line-height:1.65;color:rgba(251,249,245,.88);flex:1;}
+  .testi-card .who{font-size:12px;color:rgba(251,249,245,.55);letter-spacing:.03em;}
+  .testi-card .who strong{color:rgba(251,249,245,.85);font-weight:500;}
+  .testi-foot{margin-top:34px;display:flex;align-items:center;justify-content:space-between;gap:18px 24px;flex-wrap:wrap;}
   .testi-score{font-family:'Fraunces',serif;font-size:26px;color:var(--rosa-suave);}
   .testi-score span{font-size:13px;font-family:'Work Sans',sans-serif;color:rgba(251,249,245,.55);display:block;letter-spacing:.04em;}
+  .testi-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .tc-nav{display:flex;gap:10px;}
+  .tc-nav button{width:42px;height:42px;border-radius:50%;background:transparent;border:1px solid rgba(246,241,231,.3);color:var(--marfil);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .3s ease,background .3s ease;}
+  .tc-nav button:hover{border-color:var(--marfil);background:rgba(255,255,255,.06);}
+  .tc-nav svg{width:15px;height:15px;}
 
   /* ---------- equipo / nosotros ---------- */
   .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
@@ -441,7 +453,7 @@
     section{padding:88px 0;}
     .section-head{margin-bottom:52px;}
     .team-grid,.reserva-grid,.valoracion-grid,.laser-grid,.strip{grid-template-columns:1fr;}
-    .areas,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
+    .areas,.expect-grid,.metodo .steps,.contact-info{grid-template-columns:1fr 1fr;}
     .team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
     .team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
     .metodo .steps{gap:40px 28px;}
@@ -488,14 +500,13 @@
     .hero-ctas,.sec-cta,.laser-cta,.areas-cta{flex-direction:column;gap:12px;width:100%;}
     .hero-ctas .btn,.sec-cta .btn,.laser-cta .btn,.areas-cta .btn,.testi-foot .btn{width:100%;}
 
-    .areas,.expect-grid,.metodo .steps,.metodo-trust,.testi-grid,.contact-info{grid-template-columns:1fr;}
+    .areas,.expect-grid,.metodo .steps,.metodo-trust,.contact-info{grid-template-columns:1fr;}
     .strip-card .sc-inner{padding:32px 24px 30px;}
     .metodo-promesa{padding:26px 24px;}
     .metodo-promesa p{font-size:17px;}
     .expect{padding:26px 22px;}
-    .testi-grid{gap:16px;}
-    .testi-card{padding:26px 22px;}
-    .testi-foot{gap:16px;}
+    .testi-card{padding:26px 24px;}
+    .testi-foot{gap:16px;flex-direction:column;align-items:flex-start;}
     .strip-card{padding:36px 24px;}
     .form-card{padding:28px 20px;}
     .reserva-card{padding:32px 24px;}
@@ -725,36 +736,75 @@
 </section>
 
 <!-- ================= TESTIMONIOS ================= -->
-<!-- TODO: sustituir los 3 testimonios por reseñas REALES de Google (texto + nombre/inicial + tratamiento)
-     y poner la puntuación y el nº de reseñas reales. Enlazar el botón a la ficha de Google del centro.
-     Mientras no haya reseñas reales verificables, se puede ocultar esta sección entera. -->
+<!-- Reseñas reales de Google (verbatim). Actualizar la puntuación media y el
+     enlace del botón con la ficha real de Google del centro cuando la tengáis. -->
 <section id="opiniones" class="testi">
   <div class="wrap">
     <div class="section-head" data-reveal>
       <div class="eyebrow">Opiniones</div>
       <h2>Lo que dicen nuestros pacientes</h2>
-      <p>Reseñas verificadas de personas que ya han pasado por Qualyderm.</p>
+      <p>Reseñas reales y verificadas de Google, de personas que ya han pasado por Qualyderm.</p>
     </div>
-    <div class="testi-grid" data-reveal>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
-        <div class="who">— Nombre o inicial · Tratamiento</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
-        <div class="who">— Nombre o inicial · Tratamiento</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>«[Reseña real pendiente de Google — sustituir por el texto literal de una opinión verificada.]»</p>
-        <div class="who">— Nombre o inicial · Tratamiento</div>
+
+    <div class="testi-carousel" data-reveal>
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Consi demuestra una alta preparación y un trato impecable. Excelente profesional.»</p>
+          <div class="who"><strong>David Sánchez</strong> · Google · hace 1 año</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Maravilloso sitio. Tratamientos buenísimos. Y una profesional estupenda. Súper puntuales con las citas. Recomendable 100%.»</p>
+          <div class="who"><strong>Aída López</strong> · Google · hace 7 años</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Muy profesionales y un trabajo exquisito. ¡Gracias por la atención!»</p>
+          <div class="who"><strong>Laura Requena</strong> · Google · hace 1 año</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Es una gran profesional y tiene un buen trato con los clientes. ¡Estoy encantada!»</p>
+          <div class="who"><strong>Raquel Miguel Serrano</strong> · Google · hace 4 años</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Excelente calidad y trato excepcional. Muy recomendable.»</p>
+          <div class="who"><strong>Antonio Gracia Rubio</strong> · Google · hace 3 años</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Un trato excelente y una muy buena profesional.»</p>
+          <div class="who"><strong>Laura Rodríguez Perea</strong> · Google · hace 3 años</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Estupenda profesional. Trato amable. Muy aconsejable.»</p>
+          <div class="who"><strong>Jesús Castillo</strong> · Google · hace 7 años</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Trato muy cercano y profesional.»</p>
+          <div class="who"><strong>Javier Gómez</strong> · Google · hace 1 año</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-label="5 de 5">★★★★★</div>
+          <p>«Muy buena atención.»</p>
+          <div class="who"><strong>Gema Massohernández</strong> · Google · hace 3 años</div>
+        </div>
       </div>
     </div>
+
     <div class="testi-foot" data-reveal>
-      <div class="testi-score">4,X/5 <span>Puntuación en Google · pendiente de confirmar</span></div>
-      <a href="https://www.google.com/search?q=Qualyderm+medicina+estetica+opiniones" target="_blank" rel="noopener" class="btn btn-light" data-ga="ver_google">Ver reseñas en Google</a>
+      <div class="testi-score">5/5 <span>en las últimas reseñas de Google</span></div>
+      <div class="testi-actions">
+        <div class="tc-nav">
+          <button type="button" class="tc-prev" aria-label="Reseña anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button type="button" class="tc-next" aria-label="Siguiente reseña"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <a href="https://www.google.com/search?q=Qualyderm+medicina+estetica+opiniones" target="_blank" rel="noopener" class="btn btn-light" data-ga="ver_google">Ver reseñas en Google</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1058,6 +1108,20 @@
       status.textContent = '¡Gracias! Te hemos abierto WhatsApp para terminar. Si no, te llamamos nosotros.';
       status.classList.add('show');
     });
+  }
+
+  // ---- carrusel de reseñas ----
+  var testiTrack = document.getElementById('testiTrack');
+  if (testiTrack) {
+    var tcStep = function(){
+      var card = testiTrack.querySelector('.testi-card');
+      var gap = 22;
+      return card ? card.getBoundingClientRect().width + gap : 360;
+    };
+    var tcPrev = document.querySelector('.tc-prev');
+    var tcNext = document.querySelector('.tc-next');
+    tcPrev && tcPrev.addEventListener('click', function(){ testiTrack.scrollBy({ left: -tcStep(), behavior: 'smooth' }); });
+    tcNext && tcNext.addEventListener('click', function(){ testiTrack.scrollBy({ left: tcStep(), behavior: 'smooth' }); });
   }
 </script>
 
