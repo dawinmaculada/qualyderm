@@ -206,53 +206,34 @@
   .sec-cta{margin-top:52px;display:flex;gap:16px;flex-wrap:wrap;}
   .sec-cta.centered{justify-content:center;}
 
-  /* ---------- router: ¿qué te gustaría mejorar? ---------- */
-  .router{background:var(--marfil-2);}
-  .router .section-head{margin-bottom:38px;}
-  .router .section-head p{margin-bottom:26px;}
-  .router-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .router-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .router-grid a{
-    position:relative;overflow:hidden;
-    padding:34px 26px 30px;border:1px solid var(--linea);border-radius:2px;
-    display:flex;flex-direction:column;gap:14px;background:var(--blanco);
+  /* ---------- áreas / tratamientos ---------- */
+  .tratamientos{background:var(--marfil-2);}
+  .tratamientos .section-head{margin-bottom:34px;}
+  .tratamientos .section-head p{margin-bottom:26px;}
+  .areas-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .area-card{
+    position:relative;overflow:hidden;display:flex;flex-direction:column;
+    background:var(--blanco);border:1px solid var(--linea);border-radius:2px;
     transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease,border-color .3s ease;
   }
-  .router-grid a::before{
-    content:'';position:absolute;left:0;top:0;height:2px;width:0;background:var(--bronce);
+  .area-card::before{
+    content:'';position:absolute;left:0;top:0;height:2px;width:0;background:var(--bronce);z-index:2;
     transition:width .5s cubic-bezier(.16,1,.3,1);
   }
-  .router-grid a:hover{transform:translateY(-6px);box-shadow:0 34px 54px -30px rgba(30,50,38,.30);border-color:rgba(30,50,38,.04);}
-  .router-grid a:hover::before{width:100%;}
-  .router-grid .r-ico-wrap{
-    width:52px;height:52px;border-radius:50%;background:var(--marfil-2);
-    display:flex;align-items:center;justify-content:center;transition:background .35s ease;
-  }
-  .router-grid a:hover .r-ico-wrap{background:var(--rosa-suave);}
-  .router-grid .r-ico{width:23px;height:23px;color:var(--bronce);}
-  .router-grid h3{font-size:19px;font-weight:500;}
-  .router-grid p{font-size:12.5px;font-weight:300;color:#5b5f57;line-height:1.6;flex:1;}
-  .router-grid .r-go{margin-top:8px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--verde);display:inline-flex;align-items:center;gap:8px;}
-  .router-grid .r-go svg{transition:transform .3s ease;}
-  .router-grid a:hover .r-go{color:var(--bronce);}
-  .router-grid a:hover .r-go svg{transform:translateX(5px);}
-
-  /* ---------- pillars (tratamientos) ---------- */
-  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-  .pillar{background:transparent;padding:8px 24px;position:relative;border-left:1px solid var(--linea);}
-  .pillar:first-child{border-left:none;padding-left:0;}
-  .pillar:last-child{padding-right:0;}
-  .pillar-img{width:100%;height:208px;overflow:hidden;margin-bottom:26px;border-radius:1px;}
-  .pillar-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) sepia(3%);transition:transform .8s cubic-bezier(.16,1,.3,1);}
-  .pillar:hover .pillar-img img{transform:scale(1.045);}
-  .pillar .num{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:13px;color:var(--rosa);margin-bottom:10px;display:block;letter-spacing:.02em;}
-  .pillar h3{font-size:20px;margin-bottom:9px;font-weight:400;}
-  .pillar .p-benefit{color:var(--verde-2);font-size:14px;font-weight:400;margin-bottom:12px;}
-  .pillar p{color:#5b5f57;font-size:13px;font-weight:300;margin-bottom:24px;}
-  .pillar-link{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);display:inline-flex;align-items:center;gap:9px;padding-bottom:6px;border-bottom:1px solid var(--linea);transition:border-color .3s ease;}
-  .pillar:hover .pillar-link{border-color:var(--bronce);}
-  .pillar-link svg{width:12px;height:12px;transition:transform .3s ease;}
-  .pillar:hover .pillar-link svg{transform:translateX(5px);}
+  .area-card:hover{transform:translateY(-6px);box-shadow:0 34px 54px -30px rgba(30,50,38,.30);border-color:rgba(30,50,38,.05);}
+  .area-card:hover::before{width:100%;}
+  .area-card .a-img{height:200px;overflow:hidden;background:var(--marfil-2);}
+  .area-card .a-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) sepia(4%);transition:transform .8s cubic-bezier(.16,1,.3,1);}
+  .area-card:hover .a-img img{transform:scale(1.05);}
+  .area-card .a-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;}
+  .area-card .num{display:block;font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;color:var(--rosa);letter-spacing:.02em;margin-bottom:8px;}
+  .area-card h3{font-size:19px;font-weight:400;margin-bottom:8px;}
+  .area-card .p-benefit{display:block;color:var(--verde-2);font-size:13.5px;font-weight:400;margin-bottom:10px;}
+  .area-card p{color:#5b5f57;font-size:12.5px;font-weight:300;line-height:1.6;margin-bottom:20px;flex:1;}
+  .area-card .a-link{font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--azul);display:inline-flex;align-items:center;gap:8px;}
+  .area-card .a-link svg{width:12px;height:12px;transition:transform .3s ease;}
+  .area-card:hover .a-link svg{transform:translateX(5px);}
 
   /* ---------- resultados / qué esperar ---------- */
   .resultados{background:var(--marfil-2);}
@@ -416,22 +397,8 @@
     nav.mainnav>a,.dropdown-toggle{font-size:13px;}
     .header-right{gap:16px;}
   }
-  @media (max-width:1200px) and (min-width:1025px){
-    .pillar h3{font-size:19px;}
-    .pillar p{font-size:12.5px;}
-  }
   @media (max-width:1024px){
-    .pillars{grid-template-columns:1fr 1fr;}
-    .pillar{padding:8px 22px;}
-    .pillar:nth-child(odd){border-left:none;padding-left:0;}
-    .pillar:nth-child(even){padding-right:0;}
-    .pillar:nth-child(n+3){border-top:1px solid var(--linea);padding-top:40px;margin-top:40px;}
-    .pillar-img{height:220px;}
-    .pillar h3{font-size:22px;}
-    .pillar p{font-size:13.5px;}
-  }
-  @media (max-width:1080px) and (min-width:981px){
-    .router-grid{grid-template-columns:1fr 1fr;}
+    .areas{grid-template-columns:1fr 1fr;}
   }
   @media (max-width:980px){
     .burger{display:flex;}
@@ -460,7 +427,7 @@
     section{padding:88px 0;}
     .section-head{margin-bottom:52px;}
     .team-grid,.reserva-grid,.valoracion-grid,.laser-grid,.strip{grid-template-columns:1fr;}
-    .router-grid,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
+    .areas,.expect-grid,.metodo .steps,.testi-grid,.contact-info{grid-template-columns:1fr 1fr;}
     .team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
     .team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
     .metodo .steps{gap:40px 28px;}
@@ -504,18 +471,13 @@
 
     /* botones: ocupan el ancho y su texto envuelve sin desbordar */
     .btn{padding:14px 18px;font-size:12px;letter-spacing:.05em;width:100%;}
-    .hero-ctas,.sec-cta,.laser-cta,.router-actions{flex-direction:column;gap:12px;width:100%;}
-    .hero-ctas .btn,.sec-cta .btn,.laser-cta .btn,.router-actions .btn,.testi-foot .btn,.strip-card .btn{width:100%;}
+    .hero-ctas,.sec-cta,.laser-cta,.areas-cta{flex-direction:column;gap:12px;width:100%;}
+    .hero-ctas .btn,.sec-cta .btn,.laser-cta .btn,.areas-cta .btn,.testi-foot .btn,.strip-card .btn{width:100%;}
     .strip-card .btn{align-self:stretch!important;}
 
-    .pillars,.router-grid,.expect-grid,.metodo .steps,.metodo-trust,.testi-grid,.contact-info{grid-template-columns:1fr;}
+    .areas,.expect-grid,.metodo .steps,.metodo-trust,.testi-grid,.contact-info{grid-template-columns:1fr;}
     .metodo-promesa{padding:26px 24px;}
     .metodo-promesa p{font-size:17px;}
-    .pillar{padding:0!important;border-left:none!important;}
-    .pillar:nth-child(n+2){border-top:1px solid var(--linea);padding-top:36px!important;margin-top:36px;}
-    .pillar-img{height:220px;}
-    .pillar h3{font-size:21px;}
-    .router-grid a{padding:28px 24px;}
     .expect{padding:26px 22px;}
     .testi-grid{gap:16px;}
     .testi-card{padding:26px 22px;}
@@ -599,88 +561,59 @@
   </div>
 </section>
 
-<!-- ================= ¿QUÉ TE GUSTARÍA MEJORAR? ================= -->
-<section class="router" id="empezar">
+<!-- ================= TRATAMIENTOS (4 áreas) ================= -->
+<section id="tratamientos" class="tratamientos">
   <div class="wrap">
     <div class="section-head centered" data-reveal>
-      <div class="eyebrow">Empieza por aquí</div>
-      <h2>¿Qué te gustaría mejorar?</h2>
-      <p>Cuéntanos qué te preocupa y nuestro equipo estudia tu caso. La primera valoración es gratuita y sin compromiso — y si ya lo tienes claro, elige tu área abajo.</p>
-      <div class="router-actions">
-        <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_router">Pedir valoración gratuita</a>
-        <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20en%20Qualyderm" target="_blank" rel="noopener" class="btn btn-ghost" data-ga="whatsapp_router">Escríbenos por WhatsApp</a>
-      </div>
-    </div>
-    <div class="router-grid" data-reveal>
-      <a href="paginas/estetica-facial.html" data-ga="router_rostro">
-        <span class="r-ico-wrap"><svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8.5 14c1 1.2 5 1.2 7 0M9 9.5h.01M15 9.5h.01"/></svg></span>
-        <h3>Rostro</h3>
-        <p>Luminosidad, firmeza, manchas, líneas de expresión y una piel más uniforme.</p>
-        <span class="r-go">Ver tratamientos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="paginas/estetica-corporal.html" data-ga="router_cuerpo">
-        <span class="r-ico-wrap"><svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 21c0-4 2.5-8 6-8s6 4 6 8"/></svg></span>
-        <h3>Cuerpo</h3>
-        <p>Remodelación, firmeza, grasa localizada, celulitis y mejora de la silueta.</p>
-        <span class="r-go">Ver tratamientos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="paginas/depilacion-laser.html" data-ga="router_depilacion">
-        <span class="r-ico-wrap"><svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v6M12 22v-4M5 5l3 3M19 5l-3 3M4 13h4M16 13h4"/><circle cx="12" cy="13" r="3"/></svg></span>
-        <h3>Depilación</h3>
-        <p>Depilación láser adaptada a tu piel y tu vello, con valoración previa.</p>
-        <span class="r-go">Ver tratamientos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a href="paginas/medicina-estetica.html" data-ga="router_medicina">
-        <span class="r-ico-wrap"><svg class="r-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M3 12h18" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="9"/></svg></span>
-        <h3>Medicina estética</h3>
-        <p>Rejuvenecimiento natural sin perder tu expresión, siempre con valoración médica.</p>
-        <span class="r-go">Ver tratamientos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TRATAMIENTOS (4 áreas) ================= -->
-<section id="tratamientos">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
       <div class="eyebrow">Cuatro áreas, un mismo criterio</div>
       <h2>Estética y medicina, trabajando juntas</h2>
-      <p>Cada rostro y cada cuerpo se estudian de forma individual. Por eso en Qualyderm el área estética y el área médica comparten diagnóstico — para llegar siempre a la solución más precisa, nunca a la más genérica.</p>
+      <p>Cada rostro y cada cuerpo se estudian de forma individual. El área estética y la médica comparten diagnóstico para llegar siempre a la solución más precisa, nunca a la más genérica. Empieza por el área que te interesa — o pide una valoración y te orientamos.</p>
+      <div class="areas-cta">
+        <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_areas">Pedir valoración gratuita</a>
+        <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20en%20Qualyderm" target="_blank" rel="noopener" class="btn btn-ghost" data-ga="whatsapp_areas">Escríbenos por WhatsApp</a>
+      </div>
     </div>
-    <div class="pillars">
-      <div class="pillar" id="facial" data-reveal>
-        <div class="pillar-img"><img src="assets/img/tratamiento-facial.jpg" alt="Tratamiento facial en Qualyderm" loading="lazy"></div>
-        <span class="num">Área 01</span>
-        <h3>Rostro</h3>
-        <p class="p-benefit">Recupera luminosidad, firmeza y una piel más uniforme.</p>
-        <p>Higiene y oxigenación, hidratación, manchas, peeling, radiofrecuencia, HIFU y láser. Protocolos faciales realizados por nuestra técnica especialista.</p>
-        <a href="paginas/estetica-facial.html" class="pillar-link" data-ga="ver_rostro">Ver tratamientos de rostro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="pillar" id="corporal" data-reveal style="transition-delay:.1s">
-        <div class="pillar-img"><img src="assets/img/corporal-remodelacion.jpg" alt="Tratamiento de estética corporal en Qualyderm" loading="lazy"></div>
-        <span class="num">Área 02</span>
-        <h3>Cuerpo</h3>
-        <p class="p-benefit">Remodelación, firmeza y mejora de la silueta.</p>
-        <p>Remodelación corporal, grasa localizada, celulitis, reafirmación muscular, flacidez y antiestrías. Aparatología avanzada y protocolos combinados.</p>
-        <a href="paginas/estetica-corporal.html" class="pillar-link" data-ga="ver_cuerpo">Ver tratamientos de cuerpo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="pillar" id="medicina" data-reveal style="transition-delay:.15s">
-        <div class="pillar-img"><img src="assets/img/medicina-acido-hialuronico.jpg" alt="Medicina estética en Qualyderm" loading="lazy"></div>
-        <span class="num">Área 03</span>
-        <h3>Medicina estética</h3>
-        <p class="p-benefit">Rejuvenecimiento natural sin perder tu expresión.</p>
-        <p>Dirigida por nuestra doctora. Líneas de expresión, definición del contorno facial, contorno de ojos y labios, grasa localizada, hiperhidrosis y revitalización capilar.</p>
-        <a href="paginas/medicina-estetica.html" class="pillar-link" data-ga="ver_medicina">Ver medicina estética <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="pillar" id="depilacion" data-reveal style="transition-delay:.22s">
-        <div class="pillar-img"><img src="assets/img/medicina-biolifting.jpg" alt="Depilación láser en Qualyderm" loading="lazy"></div>
-        <span class="num">Área 04</span>
-        <h3>Depilación láser</h3>
-        <p class="p-benefit">Reducción progresiva del vello, cuidando la piel.</p>
-        <p>Láser de diodo Atenea con sistema SFS e IPL SHR, adaptados a tu fototipo y a cada zona. Valoración y test de tolerancia gratuitos antes de empezar.</p>
-        <a href="paginas/depilacion-laser.html" class="pillar-link" data-ga="ver_depilacion">Ver depilación láser <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
+    <div class="areas" data-reveal>
+      <a class="area-card" href="paginas/estetica-facial.html" data-ga="ver_rostro">
+        <div class="a-img"><img src="assets/img/facial/06-radiofrecuencia.jpg" alt="Tratamiento facial en Qualyderm" loading="lazy"></div>
+        <div class="a-body">
+          <span class="num">Área 01</span>
+          <h3>Rostro</h3>
+          <span class="p-benefit">Luminosidad, firmeza y una piel más uniforme.</span>
+          <p>Higiene y oxigenación, hidratación, manchas, peeling, radiofrecuencia, HIFU y láser.</p>
+          <span class="a-link">Ver tratamientos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="area-card" href="paginas/estetica-corporal.html" data-ga="ver_cuerpo">
+        <div class="a-img"><img src="assets/img/corporal/01-remodelacion.jpg" alt="Tratamiento de estética corporal en Qualyderm" loading="lazy"></div>
+        <div class="a-body">
+          <span class="num">Área 02</span>
+          <h3>Cuerpo</h3>
+          <span class="p-benefit">Remodelación, firmeza y mejora de la silueta.</span>
+          <p>Grasa localizada, celulitis, reafirmación muscular, flacidez, antiestrías y más.</p>
+          <span class="a-link">Ver tratamientos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="area-card" href="paginas/medicina-estetica.html" data-ga="ver_medicina">
+        <div class="a-img"><img src="assets/img/medicina-acido-hialuronico.jpg" alt="Medicina estética en Qualyderm" loading="lazy"></div>
+        <div class="a-body">
+          <span class="num">Área 03</span>
+          <h3>Medicina estética</h3>
+          <span class="p-benefit">Rejuvenecimiento natural sin perder tu expresión.</span>
+          <p>Dirigida por nuestra doctora. Líneas de expresión, contorno facial, ojos y labios, y más.</p>
+          <span class="a-link">Ver medicina estética <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="area-card" href="paginas/depilacion-laser.html" data-ga="ver_depilacion">
+        <div class="a-img"><img src="assets/img/depilacion/q2-zonas-corporales.jpg" alt="Depilación láser en Qualyderm" loading="lazy"></div>
+        <div class="a-body">
+          <span class="num">Área 04</span>
+          <h3>Depilación láser</h3>
+          <span class="p-benefit">Reducción progresiva del vello, cuidando la piel.</span>
+          <p>Láser de diodo Atenea SFS e IPL SHR, adaptados a tu fototipo. Test de tolerancia gratuito.</p>
+          <span class="a-link">Ver depilación láser <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -957,7 +890,7 @@
         <span class="logo-text">
           <span class="name">Qualyderm</span>
           <span class="tag">Medicina &amp; Estética</span>
-        </span>
+        </div>
       </a>
       <div class="fcols">
         <div class="fcol">
