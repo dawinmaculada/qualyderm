@@ -19,6 +19,7 @@
   /* azul de acción (botones) */
   --azul:#2F5069;
   --azul-2:#3A6183;
+  --azul-oscuro:#1E3A49;
   --carbon:#2A2924;
   --linea:rgba(30,50,38,.10);
   --blanco:#FFFFFF;
@@ -183,7 +184,7 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
 
 /* ---------- cierre de página ----------
    Sección clara, en la misma línea que el resto del contenido.
-   El contraste con el pie (verde) hace de separación limpia. */
+   El contraste con el pie (azul oscuro) hace de separación limpia. */
 .closing{background:var(--marfil);padding:96px 0 108px;border-top:1px solid var(--linea);}
 .closing h2{font-size:clamp(24px,2.8vw,34px);max-width:560px;font-weight:400;margin-top:14px;}
 .closing p{color:#5b5f57;font-weight:300;font-size:15px;margin:16px 0 32px;max-width:460px;}
@@ -193,7 +194,7 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
 .closing .cta-powered a:hover strong{border-color:currentColor;}
 
 /* ---------- footer ---------- */
-footer{background:var(--verde);color:rgba(251,249,245,.65);padding:80px 0 34px;}
+footer{background:var(--azul-oscuro);color:rgba(251,249,245,.65);padding:80px 0 34px;}
 .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(246,241,231,.14);}
 .footer-top .logo-text .name{color:var(--marfil);}
 .footer-top .logo svg{color:var(--marfil);}
