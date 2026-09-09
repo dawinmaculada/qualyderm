@@ -170,14 +170,16 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
 /* fila incompleta centrada (13 tarjetas -> última suelta) */
 .treat-grid--photos .treat:last-child:nth-child(3n+1){grid-column:2;}
 
-/* ---------- cta band ---------- */
-.cta-band{background:var(--verde);color:var(--marfil);padding:100px 0;}
-.cta-band h2{color:var(--marfil);font-size:clamp(24px,2.8vw,36px);max-width:540px;font-weight:400;margin-top:16px;}
-.cta-band p{color:rgba(251,249,245,.72);font-weight:300;font-size:15px;margin:18px 0 34px;max-width:460px;}
-.cta-band .btns{display:flex;gap:16px;flex-wrap:wrap;}
-.cta-band .cta-powered{margin-top:26px;font-size:11.5px;letter-spacing:.04em;color:rgba(251,249,245,.5);}
-.cta-band .cta-powered strong{color:var(--rosa-suave);font-weight:600;border-bottom:1px solid transparent;transition:border-color .3s ease;}
-.cta-band .cta-powered a:hover strong{border-color:currentColor;}
+/* ---------- cierre de página ----------
+   Sección clara, en la misma línea que el resto del contenido.
+   El contraste con el pie (verde) hace de separación limpia. */
+.closing{background:var(--marfil);padding:96px 0 108px;border-top:1px solid var(--linea);}
+.closing h2{font-size:clamp(24px,2.8vw,34px);max-width:560px;font-weight:400;margin-top:14px;}
+.closing p{color:#5b5f57;font-weight:300;font-size:15px;margin:16px 0 32px;max-width:460px;}
+.closing .btns{display:flex;gap:16px;flex-wrap:wrap;}
+.closing .cta-powered{margin-top:26px;font-size:11.5px;letter-spacing:.04em;color:#8a8d84;}
+.closing .cta-powered strong{color:var(--verde);font-weight:600;border-bottom:1px solid transparent;transition:border-color .3s ease;}
+.closing .cta-powered a:hover strong{border-color:currentColor;}
 
 /* ---------- footer ---------- */
 footer{background:var(--verde);color:rgba(251,249,245,.65);padding:80px 0 34px;}
@@ -271,8 +273,8 @@ footer .fcol a:hover{color:var(--marfil);}
   .page-hero h1{font-size:clamp(30px,6vw,44px);}
   .page-hero .lede{font-size:15.5px;}
   .treatments{padding:76px 0 88px;}
-  section.cta-band{padding:76px 0;}
-  .cta-band h2{font-size:clamp(24px,5vw,32px);}
+  .closing{padding:76px 0 84px;}
+  .closing h2{font-size:clamp(24px,5vw,32px);}
 }
 @media (max-width:600px){
   .wrap{padding:0 18px;}
@@ -287,9 +289,9 @@ footer .fcol a:hover{color:var(--marfil);}
   .treat-grid--photos .treat:last-child:nth-child(2n+1){grid-column:auto;width:auto;justify-self:auto;}
   .treat-grid--photos .treat-img{margin-bottom:18px;}
   .btn{padding:14px 18px;font-size:12px;letter-spacing:.05em;width:100%;}
-  .page-hero .hero-ctas,.cta-band .btns{flex-direction:column;gap:12px;width:100%;}
-  .page-hero .hero-ctas .btn,.cta-band .btns .btn{width:100%;}
-  .cta-band .cta-powered{margin-top:22px;}
+  .page-hero .hero-ctas,.closing .btns{flex-direction:column;gap:12px;width:100%;}
+  .page-hero .hero-ctas .btn,.closing .btns .btn{width:100%;}
+  .closing .cta-powered{margin-top:22px;}
   .join{padding:64px 0 76px;}
   .form-card{padding:28px 20px;}
   .join-wa .btn{width:100%;}
