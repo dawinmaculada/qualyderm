@@ -71,6 +71,9 @@
     --rosa-suave: #F3E4DD;
     --bronce: #AB8B5F;
     --bronce-luz: #C9A876;
+    /* guiño al logo original (tonos previos al Pantone) */
+    --celeste: #9FC4D6;
+    --lavanda: #8385C4;
     --carbon: #2A2924;
     --linea: rgba(30,50,38,.10);
     --blanco: #FFFFFF;
@@ -133,6 +136,8 @@
   header .wrap{display:flex;align-items:center;justify-content:space-between;position:relative;}
   .logo{display:flex;align-items:center;gap:13px;}
   .logo svg{width:42px;height:38px;flex-shrink:0;color:var(--verde);overflow:visible;}
+  /* el punto del logo recupera el tono del logo original */
+  .qmark circle:nth-of-type(2){stroke:var(--lavanda);}
   .logo-text{display:flex;flex-direction:column;line-height:1;}
   .logo-text .name{font-family:'Fraunces',serif;font-size:22px;color:var(--verde);letter-spacing:.01em;}
   .logo-text .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);margin-top:3px;}
@@ -168,7 +173,10 @@
   /* ---------- hero ---------- */
   .hero{
     position:relative;padding:128px 0 92px;overflow:hidden;
-    background:radial-gradient(ellipse 1000px 650px at 86% 4%, rgba(219,179,166,.16), transparent 62%), var(--marfil);
+    background:
+      radial-gradient(ellipse 1000px 650px at 86% 4%, rgba(219,179,166,.16), transparent 62%),
+      radial-gradient(ellipse 760px 560px at 4% 96%, rgba(131,133,196,.10), transparent 60%),
+      var(--marfil);
   }
   .hero .wrap{position:relative;z-index:2;}
   .hero-copy{max-width:760px;margin:0 auto 40px;text-align:center;}
@@ -268,7 +276,7 @@
   }
   .metodo .step h3{font-size:16px;font-weight:600;margin:0 0 9px;letter-spacing:0;text-transform:none;}
   .metodo .step p{font-size:13px;font-weight:300;color:#5b5f57;line-height:1.62;}
-  .metodo-promesa{margin-top:60px;max-width:720px;padding:32px 38px;background:var(--blanco);border-left:2px solid var(--rosa);border-radius:2px;}
+  .metodo-promesa{margin-top:60px;max-width:720px;padding:32px 38px;background:var(--blanco);border-left:2px solid var(--celeste);border-radius:2px;}
   .metodo-promesa p{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:18.5px;line-height:1.52;color:var(--verde);}
   .metodo-promesa .mp-firma{margin-top:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronce);font-weight:600;}
   .metodo-trust{display:grid;grid-template-columns:1fr 1fr;gap:15px 40px;margin-top:36px;max-width:720px;}
@@ -317,7 +325,9 @@
   .laser-cta{display:flex;gap:14px;flex-wrap:wrap;}
 
   /* ---------- valoración / form ---------- */
-  .valoracion{background:var(--marfil-2);}
+  .valoracion{background:var(--marfil-2);position:relative;overflow:hidden;}
+  .valoracion::before{content:'';position:absolute;top:-120px;left:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(159,196,214,.30),transparent 66%);pointer-events:none;}
+  .valoracion .wrap{position:relative;z-index:1;}
   .valoracion-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start;}
   .valoracion-grid .intro h2{font-size:clamp(27px,3vw,40px);margin-top:14px;}
   .valoracion-grid .intro p{color:#4b5049;font-size:16px;margin-top:18px;max-width:420px;}
