@@ -74,6 +74,9 @@
     /* guiño al logo original (tonos previos al Pantone) */
     --celeste: #9FC4D6;
     --lavanda: #8385C4;
+    /* azul de acción (botones) */
+    --azul: #2F5069;
+    --azul-2: #3A6183;
     --carbon: #2A2924;
     --linea: rgba(30,50,38,.10);
     --blanco: #FFFFFF;
@@ -112,10 +115,10 @@
     border:1px solid transparent;transition:all .45s cubic-bezier(.4,0,.2,1);
     text-align:center;max-width:100%;
   }
-  .btn-primary{background:var(--verde);color:var(--marfil);}
-  .btn-primary:hover{background:var(--verde-2);box-shadow:0 18px 34px -18px rgba(30,50,38,.45);}
-  .btn-ghost{background:transparent;color:var(--verde);border-color:rgba(30,50,38,.2);}
-  .btn-ghost:hover{border-color:var(--verde);}
+  .btn-primary{background:var(--azul);color:var(--marfil);}
+  .btn-primary:hover{background:var(--azul-2);box-shadow:0 18px 34px -18px rgba(47,80,105,.5);}
+  .btn-ghost{background:transparent;color:var(--azul);border-color:rgba(47,80,105,.28);}
+  .btn-ghost:hover{border-color:var(--azul);}
   .btn-light{background:transparent;color:var(--marfil);border-color:rgba(251,249,245,.35);}
   .btn-light:hover{border-color:var(--marfil);}
   .btn-wa{background:#25623b;color:#fff;}
@@ -345,7 +348,7 @@
   .field input:focus{outline:none;border-color:var(--bronce);}
   .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
   .chip{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:400;padding:9px 15px;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
-  .chip.is-active,.chip:hover{border-color:var(--verde);background:var(--verde);color:var(--marfil);}
+  .chip.is-active,.chip:hover{border-color:var(--azul);background:var(--azul);color:var(--marfil);}
   .field-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;font-weight:300;color:#5b5f57;margin:6px 0 26px;}
   .field-check input{margin-top:3px;}
   .form-alt{margin-top:16px;text-align:center;font-size:12.5px;font-weight:300;color:#8a8d84;}
@@ -482,7 +485,7 @@
     }
     .mobilebar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 0;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
     .mobilebar .mb-wa{background:#25623b;color:#fff;}
-    .mobilebar .mb-book{background:var(--verde);color:var(--marfil);}
+    .mobilebar .mb-book{background:var(--azul);color:var(--marfil);}
     .mobilebar svg{width:15px;height:15px;}
     footer{padding-bottom:88px;}
   }
