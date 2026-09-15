@@ -241,6 +241,19 @@ footer .fcol a:hover{color:var(--marfil);}
 .form-status{margin-top:14px;font-size:13px;font-weight:400;color:var(--verde-2);display:none;}
 .form-status.show{display:block;}
 
+/* ---------- la clínica: galería + características ---------- */
+.clinic-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;align-items:start;}
+.clinic-photo{margin:0;}
+.clinic-photo .cp-frame{height:360px;display:flex;align-items:center;justify-content:center;background:var(--marfil-2);border-radius:2px;box-shadow:var(--sombra);overflow:hidden;}
+.clinic-photo .cp-frame img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;filter:saturate(.96);}
+.clinic-photo figcaption{margin-top:16px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:14.5px;color:var(--verde-2);}
+
+.clinic-features{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:90px;text-align:center;}
+.clinic-features .cf-icon{width:52px;height:52px;border-radius:50%;background:var(--marfil-2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.clinic-features .cf-icon svg{width:22px;height:22px;color:var(--bronce);}
+.clinic-features h3{font-size:17px;font-weight:500;margin-bottom:10px;}
+.clinic-features p{font-size:13.5px;font-weight:300;color:#5b5f57;line-height:1.6;max-width:280px;margin:0 auto;}
+
 /* ---------- responsive ---------- */
 @media (max-width:1200px) and (min-width:981px){
   nav.mainnav{gap:20px;}
@@ -253,6 +266,7 @@ footer .fcol a:hover{color:var(--marfil);}
   .treat-grid--photos .treat:last-child:nth-child(3n+1){grid-column:auto;}
   .treat-grid--photos .treat:last-child:nth-child(2n+1){grid-column:1 / -1;justify-self:center;width:calc(50% - 13px);}
   .join-grid{gap:48px;}
+  .clinic-gallery{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:860px){
   .join{padding:76px 0 88px;}
@@ -307,4 +321,7 @@ footer .fcol a:hover{color:var(--marfil);}
   .join{padding:64px 0 76px;}
   .form-card{padding:28px 20px;}
   .join-wa .btn{width:100%;}
+  .clinic-gallery{grid-template-columns:1fr;gap:32px;}
+  .clinic-photo .cp-frame{height:340px;}
+  .clinic-features{grid-template-columns:1fr;gap:40px;margin-top:56px;}
 }
