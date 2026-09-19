@@ -368,7 +368,7 @@
   .reserva-card ol li::before{content:counter(step);font-family:'Fraunces',serif;font-size:13px;color:var(--rosa-suave);border:1px solid rgba(246,241,231,.3);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 
   /* ---------- regalo + tolerancia strip ---------- */
-  .strip{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .strip-card{
     position:relative;overflow:hidden;border-radius:2px;min-height:360px;color:var(--marfil);
     display:flex;align-items:flex-end;text-decoration:none;
@@ -854,11 +854,20 @@
         <div class="sc-inner">
           <div class="eyebrow">Regalar</div>
           <h3>Tarjeta regalo</h3>
-          <p>¿Quieres regalar un tratamiento? Ponte en contacto con nosotros y te proponemos varias opciones para adaptarlas a quien lo va a recibir — su piel, sus objetivos y tu presupuesto.</p>
-          <span class="sc-cta">Consultar opciones <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <p>Despierta las sensaciones del bienestar y regálalas o regálatelas. ¿Quieres hacer un buen regalo? Ponte en contacto con nosotros y te propondremos varias opciones para que elijas la que mejor se adapte al afortunad@.</p>
+          <span class="sc-cta">Consultar tratamiento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
-      <a class="strip-card tolerance" href="#valoracion" data-reveal style="transition-delay:.1s" data-ga="test_tolerancia">
+      <a class="strip-card wedding" href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20tratamientos%20para%20bodas%20y%20eventos%20en%20Qualyderm" target="_blank" rel="noopener" data-reveal style="transition-delay:.06s" data-ga="bodas_eventos">
+        <img class="sc-bg" src="assets/img/home/bodas-eventos.jpg" alt="Pareja preparada para su boda tras tratamientos Qualyderm" loading="lazy">
+        <div class="sc-inner">
+          <div class="eyebrow">Momentos especiales</div>
+          <h3>Bodas y eventos</h3>
+          <p>Elaboramos un programa de tratamientos con protocolos personalizados, tanto faciales como corporales, adaptados a cada cliente para que estéis radiantes en vuestro gran día.</p>
+          <span class="sc-cta">Consultar tratamiento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="strip-card tolerance" href="#valoracion" data-reveal style="transition-delay:.12s" data-ga="test_tolerancia">
         <img class="sc-bg" src="assets/img/home/test-tolerancia.jpg" alt="Comprobación de la piel antes de la depilación láser" loading="lazy">
         <div class="sc-inner">
           <div class="eyebrow">Sin compromiso</div>
