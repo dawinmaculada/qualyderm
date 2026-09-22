@@ -205,7 +205,7 @@ footer{background:var(--azul-oscuro);color:rgba(251,249,245,.65);padding:80px 0 
 .footer-top .logo svg{width:54px;height:48px;color:var(--marfil);}
 .footer-top .logo-text .name{font-size:27px;color:var(--marfil);}
 .footer-top .logo-text .tag{font-size:11px;}
-footer .fcols{display:flex;gap:70px;flex-wrap:wrap;}
+footer .fcols{display:grid;grid-template-columns:repeat(2,minmax(140px,220px));gap:40px 70px;}
 footer .fcol h5{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-luz);margin-bottom:16px;}
 footer .fcol a{display:block;font-size:14px;color:rgba(246,241,231,.75);margin-bottom:10px;transition:color .3s ease;}
 footer .fcol a:hover{color:var(--marfil);}
@@ -341,4 +341,5 @@ footer .fcol a:hover{color:var(--marfil);}
   .clinic-gallery{grid-template-columns:1fr;gap:32px;}
   .clinic-photo .cp-frame{height:340px;}
   .clinic-features{grid-template-columns:1fr;gap:40px;margin-top:56px;}
+  footer .fcols{grid-template-columns:1fr;gap:28px;}
 }
