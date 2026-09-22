@@ -29,7 +29,7 @@ Qualyderm/
 - Hero: imagen `assets/img/hero-inicio.jpg` (titular impreso en la propia imagen). El `<h1>` real vive en `.hero-copy` — oculto (sr-only) en escritorio, visible en móvil.
 - Imágenes de las secciones interiores del home: de Unsplash (temporales, sustituir por las de `assets/img/` o la Biblioteca de medios de WordPress).
 - Paleta (variables CSS en `:root`): verde `#1E3226`, marfil `#FBF9F5`, rosa `#DBB3A6`, bronce `#AB8B5F`.
-- Sistema de reservas: bloque de demostración (widget "Velsy"), sin backend real todavía.
+- Sistema de reservas: sin widget externo — todos los enlaces de "Reservar cita" abren WhatsApp directamente.
 
 ## Secciones de la home (anclas)
 
