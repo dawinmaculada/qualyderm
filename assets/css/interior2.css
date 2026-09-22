@@ -244,9 +244,8 @@ footer .fcol a:hover{color:var(--marfil);}
 /* ---------- la clínica: galería + características ---------- */
 .clinic-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;align-items:start;}
 .clinic-photo{margin:0;}
-.clinic-photo .cp-frame{height:360px;display:flex;align-items:center;justify-content:center;background:var(--marfil-2);border-radius:2px;box-shadow:var(--sombra);overflow:hidden;}
-.clinic-photo .cp-frame img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;filter:saturate(.96);}
-.clinic-photo figcaption{margin-top:16px;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:14.5px;color:var(--verde-2);}
+.clinic-photo .cp-frame{height:360px;background:var(--marfil-2);border-radius:2px;box-shadow:var(--sombra);overflow:hidden;}
+.clinic-photo .cp-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.96);}
 
 .clinic-features{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:90px;text-align:center;}
 .clinic-features .cf-icon{width:52px;height:52px;border-radius:50%;background:var(--marfil-2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
