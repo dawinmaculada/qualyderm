@@ -376,14 +376,13 @@
   /* ---------- regalo + tolerancia strip ---------- */
   .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .strip-card{
-    position:relative;overflow:hidden;border-radius:2px;display:flex;flex-direction:column;
-    background:var(--blanco);border:1px solid var(--linea);text-decoration:none;
+    position:relative;overflow:hidden;border-radius:3px;display:flex;flex-direction:column;
+    background:var(--blanco);border:1px solid var(--bronce);text-decoration:none;
+    box-shadow:0 0 0 4px rgba(171,139,95,.14);
     transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease,border-color .3s ease;
   }
-  .strip-card::before{content:'';position:absolute;left:0;top:0;height:2px;width:0;background:var(--bronce);z-index:2;transition:width .5s cubic-bezier(.16,1,.3,1);}
-  .strip-card:hover{transform:translateY(-7px);box-shadow:0 34px 54px -30px rgba(30,50,38,.30);border-color:rgba(30,50,38,.05);}
-  .strip-card:hover::before{width:100%;}
-  .strip-card .sc-img{height:240px;overflow:hidden;background:var(--marfil-2);}
+  .strip-card:hover{transform:translateY(-7px);box-shadow:0 0 0 4px rgba(171,139,95,.2),0 34px 54px -30px rgba(30,50,38,.30);}
+  .strip-card .sc-img{height:216px;overflow:hidden;background:var(--marfil-2);margin:12px 12px 0;border-radius:1px;}
   .strip-card .sc-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) sepia(3%);transition:transform .8s cubic-bezier(.16,1,.3,1);}
   .strip-card:hover .sc-img img{transform:scale(1.06);}
   .strip-card .sc-body{position:relative;padding:28px 30px 30px;display:flex;flex-direction:column;flex:1;}
@@ -464,8 +463,8 @@
     .team-card{border-left:none!important;padding-left:0!important;border-top:1px solid var(--linea);padding-top:38px;margin-top:38px;}
     .team-card:first-child{border-top:none;padding-top:0;margin-top:0;}
     .metodo .steps{gap:40px 28px;}
-    .strip-card .sc-img{height:210px;}
-    .strip-card .sc-body{padding:24px 24px 26px;}
+    .strip-card .sc-img{height:190px;}
+    .strip-card .sc-body{padding:22px 22px 26px;}
     .laser-grid{gap:44px;}
     .laser-visual{aspect-ratio:16/9;}
     .laser-list{grid-template-columns:1fr;}
@@ -506,8 +505,8 @@
     .hero-ctas .btn,.sec-cta .btn,.laser-cta .btn,.areas-cta .btn,.testi-foot .btn{width:100%;}
 
     .areas,.expect-grid,.metodo .steps,.metodo-trust,.contact-info{grid-template-columns:1fr;}
-    .strip-card .sc-img{height:200px;}
-    .strip-card .sc-body{padding:22px 20px 26px;}
+    .strip-card .sc-img{height:200px;margin:9px 9px 0;}
+    .strip-card .sc-body{padding:20px 18px 24px;}
     .metodo-promesa{padding:26px 24px;}
     .metodo-promesa p{font-size:17px;}
     .expect{padding:26px 22px;}
