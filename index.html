@@ -412,7 +412,7 @@
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(246,241,231,.14);}
   .footer-top .logo-text .name{color:var(--marfil);}
   .footer-top .logo svg{color:var(--marfil);}
-  footer .fcols{display:flex;gap:70px;flex-wrap:wrap;}
+  footer .fcols{display:grid;grid-template-columns:repeat(3,minmax(150px,190px));gap:40px;}
   footer .fcol h5{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronce-luz);margin-bottom:16px;}
   footer .fcol a{display:block;font-size:14px;color:rgba(246,241,231,.75);margin-bottom:10px;transition:color .3s ease;}
   footer .fcol a:hover{color:var(--marfil);}
@@ -519,7 +519,7 @@
 
     .contact-item{border-left:none;padding:28px 0 0;border-top:1px solid var(--linea);}
     .contact-item:first-child{border-top:none;padding-top:0;}
-    footer .fcols{gap:32px 48px;}
+    footer .fcols{grid-template-columns:1fr;gap:28px;}
   }
 </style>
 </head>
@@ -927,7 +927,7 @@
         <span class="logo-text">
           <span class="name">Qualyderm</span>
           <span class="tag">Medicina &amp; Estética</span>
-        </div>
+        </span>
       </a>
       <div class="fcols">
         <div class="fcol">
