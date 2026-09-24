@@ -56,10 +56,10 @@ h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:400;line-height:1.18;color:
   font-weight:500;font-size:13px;line-height:1.35;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;
   border:1px solid transparent;transition:all .45s cubic-bezier(.4,0,.2,1);text-align:center;max-width:100%;
 }
-.btn-primary{background:var(--azul);color:var(--marfil);}
-.btn-primary:hover{background:var(--azul-2);box-shadow:0 18px 34px -18px rgba(47,80,105,.5);}
-.btn-ghost{background:transparent;color:var(--azul);border-color:rgba(47,80,105,.28);}
-.btn-ghost:hover{border-color:var(--azul);}
+.btn-primary{background:#78BDDE;color:var(--azul-oscuro);}
+.btn-primary:hover{background:#4FAAD4;box-shadow:0 18px 34px -18px rgba(120,189,222,.5);}
+.btn-ghost{background:transparent;color:var(--azul-oscuro);border-color:rgba(120,189,222,.5);}
+.btn-ghost:hover{border-color:#78BDDE;}
 .btn-light{background:transparent;color:var(--marfil);border-color:rgba(251,249,245,.35);}
 .btn-light:hover{border-color:var(--marfil);}
 
@@ -214,6 +214,9 @@ footer .fcol a:hover{color:var(--marfil);}
 .socials a{width:34px;height:34px;border:1px solid rgba(246,241,231,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .socials a:hover{border-color:var(--bronce-luz);color:var(--bronce-luz);}
 
+/* ---------- barra fija móvil ---------- */
+.mobilebar{display:none;}
+
 /* ---------- trabaja con nosotros / formulario ---------- */
 .join{background:var(--marfil-2);padding:110px 0 130px;}
 .join-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:start;}
@@ -318,6 +321,16 @@ footer .fcol a:hover{color:var(--marfil);}
   .treatments{padding:76px 0 88px;}
   .closing{padding:76px 0 84px;}
   .closing h2{font-size:clamp(24px,5vw,32px);}
+
+  .mobilebar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:900;
+    box-shadow:0 -6px 24px -8px rgba(30,50,38,.28);
+  }
+  .mobilebar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 0;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+  .mobilebar .mb-wa{background:#25623b;color:#fff;}
+  .mobilebar .mb-book{background:#78BDDE;color:var(--azul-oscuro);}
+  .mobilebar svg{width:15px;height:15px;}
+  footer{padding-bottom:88px;}
 }
 @media (max-width:600px){
   .wrap{padding:0 18px;}
