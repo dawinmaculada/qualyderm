@@ -140,8 +140,8 @@
   header .wrap{display:flex;align-items:center;justify-content:space-between;position:relative;}
   .logo{display:flex;align-items:center;gap:13px;}
   .logo svg{width:42px;height:38px;flex-shrink:0;color:var(--verde);overflow:visible;}
-  /* el punto del logo recupera el tono del logo original */
-  .qmark circle:nth-of-type(2){stroke:var(--lavanda);}
+  /* los dos círculos y la línea del logo recuperan el tono del logo original */
+  .qmark circle,.qmark line{stroke:var(--lavanda);}
   .logo-text{display:flex;flex-direction:column;line-height:1;}
   .logo-text .name{font-family:'Fraunces',serif;font-size:22px;color:var(--verde);letter-spacing:.01em;}
   .logo-text .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);margin-top:3px;}
@@ -587,13 +587,6 @@
       <a href="#valoracion" class="btn btn-primary" data-ga="valoracion_hero">Reservar valoración gratuita</a>
       <a href="#tratamientos" class="btn btn-light">Ver tratamientos</a>
     </div>
-
-    <div class="trust-row" data-reveal style="transition-delay:.18s">
-      <div>25+ años de experiencia</div>
-      <div>Equipo médico y estético propio</div>
-      <div>Cirujano miembro de SECPRE</div>
-      <div>Zona Retiro, Madrid</div>
-    </div>
   </div>
 </section>
 
@@ -896,7 +889,7 @@
     <div class="contact-info" data-reveal>
       <div class="contact-item">
         <div class="lbl">Dirección</div>
-        <div class="val">Calle Julio Rey Pastor, Madrid</div>
+        <div class="val">Calle Julio Rey Pastor, 2, Madrid</div>
         <small><a href="https://www.google.com/maps/dir/?api=1&destination=Qualyderm+Calle+Julio+Rey+Pastor+Madrid" target="_blank" rel="noopener" data-ga="como_llegar">Cómo llegar →</a></small>
       </div>
       <div class="contact-item">

@@ -77,8 +77,8 @@ header.scrolled{padding:12px 0;background:rgba(246,241,231,.92);backdrop-filter:
 header .wrap{display:flex;align-items:center;justify-content:space-between;position:relative;}
 .logo{display:flex;align-items:center;gap:13px;}
 .logo svg{width:42px;height:38px;flex-shrink:0;color:var(--verde);overflow:visible;}
-/* el punto del logo recupera el tono del logo original */
-.qmark circle:nth-of-type(2){stroke:var(--lavanda);}
+/* los dos círculos y la línea del logo recuperan el tono del logo original */
+.qmark circle,.qmark line{stroke:var(--lavanda);}
 .logo-text{display:flex;flex-direction:column;line-height:1;}
 .logo-text .name{font-family:'Fraunces',serif;font-size:22px;color:var(--verde);letter-spacing:.01em;}
 .logo-text .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronce);margin-top:3px;}
