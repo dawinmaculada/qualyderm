@@ -184,6 +184,17 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
   padding:0 6px;
 }
 .treat-grid--photos .treat-body .treat-tag{margin-top:4px;padding-top:0;}
+/* "Leer más" para descripciones largas */
+.treat-more summary{
+  display:inline-block;list-style:none;cursor:pointer;
+  font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--azul);
+  border-bottom:1px solid currentColor;padding-bottom:2px;
+}
+.treat-more summary::-webkit-details-marker{display:none;}
+.treat-more summary::after{content:"Leer más";}
+.treat-more[open] summary::after{content:"Leer menos";}
+.treat-more summary:hover{color:var(--azul-2);}
+.treat-more p{margin-top:11px;}
 /* fila incompleta centrada (13 tarjetas -> última suelta) */
 .treat-grid--photos .treat:last-child:nth-child(3n+1){grid-column:2;}
 
