@@ -254,6 +254,8 @@
 
   /* ---------- método qualyderm ---------- */
   .metodo{background:var(--marfil-2);}
+  /* mismo fondo que #tratamientos: sin padding superior para no sumar dos márgenes seguidos */
+  .tratamientos + .metodo{padding-top:0;}
   .metodo .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 28px;}
   .metodo .step{text-align:center;}
   .metodo .step .n{
@@ -400,8 +402,11 @@
   .strip-card .sc-cta svg{width:12px;height:12px;transition:transform .3s ease;}
   .strip-card:hover .sc-cta svg{transform:translateX(5px);}
   .strip--single{grid-template-columns:1fr;max-width:600px;margin:0 auto;}
-  .strip--single .sc-img{height:380px;}
+  /* foto cuadrada: 4:3 encuadrado hacia abajo para no cortar el logo del sobre */
+  .strip--single .sc-img{height:auto;aspect-ratio:4/3;}
+  .strip--single .sc-img img{object-position:50% 72%;transform-origin:50% 72%;}
   .strip--single .sc-body{align-items:center;text-align:center;padding:34px 36px 38px;}
+  .strip--single p{font-size:15.5px;line-height:1.7;}
   .strip--single .sc-cta{align-self:center;}
 
   /* ---------- contacto ---------- */
@@ -477,7 +482,7 @@
     .strip-card .sc-img{height:190px;}
     .strip-card .sc-body{padding:22px 22px 26px;}
     .strip--single{max-width:460px;}
-    .strip--single .sc-img{height:280px;}
+    .strip--single .sc-img{height:auto;}
     .laser-grid{gap:44px;}
     .laser-visual{aspect-ratio:16/9;}
     .laser-list{grid-template-columns:1fr;}
@@ -521,7 +526,8 @@
     .strip-card .sc-img{height:200px;margin:9px 9px 0;}
     .strip-card .sc-body{padding:20px 18px 24px;}
     .strip--single{max-width:100%;}
-    .strip--single .sc-img{height:220px;}
+    .strip--single .sc-img{height:auto;}
+    .strip--single p{font-size:15px;}
     .metodo-promesa{padding:26px 24px;}
     .metodo-promesa p{font-size:17px;}
     .expect{padding:26px 22px;}
@@ -559,10 +565,10 @@
       <div class="nav-dropdown">
         <a href="#tratamientos" class="dropdown-toggle">Tratamientos <span>▾</span></a>
         <div class="submenu">
-          <a href="paginas/estetica-facial.html">Estética facial</a>
-          <a href="paginas/estetica-corporal.html">Estética corporal</a>
-          <a href="paginas/medicina-estetica.html">Medicina estética</a>
-          <a href="paginas/depilacion-laser.html">Depilación láser</a>
+          <a href="paginas/estetica-facial.html">Estética Facial</a>
+          <a href="paginas/estetica-corporal.html">Estética Corporal</a>
+          <a href="paginas/medicina-estetica.html">Medicina Estética</a>
+          <a href="paginas/depilacion-laser.html">Depilación Láser</a>
         </div>
       </div>
       <a href="#metodo">Método Qualyderm</a>
@@ -705,17 +711,16 @@
 <section>
   <div class="wrap">
     <div class="section-head centered" data-reveal>
-      <div class="eyebrow">Además</div>
-      <h2>Ventajas para nuestros pacientes</h2>
+      <div class="eyebrow">Para alguien especial</div>
+      <h2>Regala un momento para cuidarse</h2>
     </div>
     <div class="strip strip--single">
       <a class="strip-card gift" href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20tarjeta%20regalo%20de%20Qualyderm" target="_blank" rel="noopener" data-reveal data-ga="tarjeta_regalo">
         <div class="sc-img"><img src="assets/img/home/tarjeta-regalo.jpg" alt="Tarjeta regalo de Qualyderm" loading="lazy"></div>
         <div class="sc-body">
-          <div class="eyebrow">Regalar</div>
           <h3>Tarjeta regalo</h3>
           <p>Despierta las sensaciones del bienestar y regálalas o regálatelas. ¿Quieres hacer un buen regalo? Ponte en contacto con nosotros y te propondremos varias opciones para que elijas la que mejor se adapte al afortunad@.</p>
-          <span class="sc-cta">Consultar tratamiento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="sc-cta">Regalar Qualyderm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
     </div>

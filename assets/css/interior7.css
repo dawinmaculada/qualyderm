@@ -136,6 +136,47 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
 .page-hero--center .eyebrow{justify-content:center;}
 .page-hero--center .hero-ctas{justify-content:center;}
 
+/* ---------- page hero con foto (estética facial, corporal…) ---------- */
+/* Escritorio ancho: la foto empieza bajo el menú (94px) y el texto va a la izquierda, sobre la zona crema */
+.page-hero.page-hero--photo{background:var(--marfil);padding:94px 0 0;}
+.page-hero--photo .ph-media{position:absolute;top:94px;right:0;bottom:0;left:0;z-index:0;}
+.page-hero--photo .ph-media img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block;}
+.page-hero--photo .ph-media::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(251,249,245,.9) 0%,rgba(251,249,245,.6) 30%,rgba(251,249,245,0) 50%);
+}
+.page-hero--photo .wrap{
+  position:relative;z-index:1;min-height:540px;padding-top:56px;padding-bottom:64px;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+}
+.page-hero--photo .crumbs,.page-hero--photo h1,.page-hero--photo .lede{max-width:480px;}
+.page-hero--photo .lede{color:#4b5049;}
+/* Variante para textos largos (depilación): la foto solo ocupa el 60% derecho y se funde por su borde izquierdo */
+@media (min-width:1200px){
+  .page-hero--photo-split .ph-media{
+    left:auto;width:60%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 32%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 32%);
+  }
+  .page-hero--photo-split .ph-media::after{display:none;}
+}
+/* Menos de 1200px no cabe el texto junto a la cara: foto en franja arriba y texto debajo */
+@media (max-width:1199px){
+  .page-hero--photo .ph-media{position:relative;top:auto;height:340px;}
+  .page-hero--photo .ph-media img{object-position:80% center;}
+  .page-hero--photo .ph-media::after{display:none;}
+  .page-hero--photo .wrap{min-height:0;padding-top:40px;padding-bottom:72px;}
+  .page-hero--photo .crumbs,.page-hero--photo h1,.page-hero--photo .lede{max-width:640px;}
+}
+@media (max-width:860px){
+  .page-hero.page-hero--photo{padding-top:78px;}
+  .page-hero--photo .ph-media{height:260px;}
+  .page-hero--photo .wrap{padding-top:32px;padding-bottom:56px;}
+}
+@media (max-width:600px){
+  .page-hero--photo .ph-media{height:210px;}
+}
+
 /* ---------- treatments ---------- */
 .treatments{padding:110px 0 130px;}
 .treat-intro{max-width:600px;margin-bottom:64px;}
