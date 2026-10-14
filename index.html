@@ -353,7 +353,8 @@
   .chip{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:400;padding:9px 15px;border:1px solid var(--linea);background:transparent;color:var(--carbon);border-radius:1px;cursor:pointer;transition:all .25s ease;}
   .chip.is-active,.chip:hover{border-color:var(--azul);background:var(--azul);color:var(--marfil);}
   .field-check{display:flex;align-items:flex-start;gap:10px;font-size:12px;font-weight:300;color:#5b5f57;margin:6px 0 26px;}
-  .field-check input{margin-top:3px;}
+  .field-check{cursor:pointer;}
+  .field-check input{margin-top:2px;width:18px;height:18px;flex-shrink:0;cursor:pointer;}
   .form-alt{margin-top:16px;text-align:center;font-size:12.5px;font-weight:300;color:#8a8d84;}
   .form-alt a{color:#25623b;font-weight:600;border-bottom:1px solid transparent;transition:border-color .3s ease;}
   .form-alt a:hover{border-color:currentColor;}
@@ -830,7 +831,7 @@
           </div>
           <div class="field"><label>Nombre</label><input type="text" name="nombre" required placeholder="Tu nombre"></div>
           <div class="field"><label>Teléfono / WhatsApp</label><input type="tel" name="telefono" required placeholder="6XX XXX XXX"></div>
-          <div class="field-check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="paginas/aviso-legal.html" style="text-decoration:underline;">política de privacidad</a>.</span></div>
+          <label class="field-check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la <a href="paginas/aviso-legal.html" style="text-decoration:underline;">política de privacidad</a>.</span></label>
           <button type="submit" class="btn btn-primary" style="width:100%;" data-ga="form_submit">Quiero que me asesoréis</button>
           <div class="form-status" id="formStatus"></div>
           <div class="form-alt">¿Prefieres escribirnos ahora? <a href="https://wa.me/34635829674?text=Hola%2C%20me%20gustar%C3%ADa%20una%20valoraci%C3%B3n%20en%20Qualyderm" target="_blank" rel="noopener" data-ga="whatsapp_form">Escríbenos por WhatsApp</a></div>
