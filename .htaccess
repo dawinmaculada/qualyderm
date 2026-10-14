@@ -1,0 +1,49 @@
+# Qualyderm — web estática en SiteGround (qualyderm.es)
+# Sustituye al .htaccess del WordPress antiguo.
+
+DirectoryIndex index.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# ---------- Dominio principal: https y sin www ----------
+# Solo actúa en qualyderm.es, así no afecta a dominios de prueba.
+RewriteCond %{HTTP_HOST} ^www\.qualyderm\.es$ [NC]
+RewriteRule ^ https://qualyderm.es%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^qualyderm\.es$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://qualyderm.es%{REQUEST_URI} [R=301,L]
+
+# ---------- URLs de la web WordPress antigua → páginas nuevas (301) ----------
+
+# Estética facial
+RewriteRule ^(higiene-facial|hydra-facial|exfoliantes|acne|manos|rehidratacion-facial|lifting-electrocosmetico|reafirmacion-antiarrugas|lifting-facial-hifu|lifting-de-pestanas|fotorejuvenecimiento|micropigmentacion|bodas|eventos)/?$ /paginas/estetica-facial.html [R=301,L,NC]
+RewriteRule ^centro-estetica-madrid/tratamientos-esteticos/(tratamientos-faciales|tratamientos-especiales)/?$ /paginas/estetica-facial.html [R=301,L,NC]
+
+# Estética corporal
+RewriteRule ^(reductor-anticelulitico|edemas-y-problemas-circulatorios|reafirmantes|rejuvenecimiento|exfoliacion-e-hidratacion-corporal|embarazo-y-recuperacion|higiene-de-espalda|masajes-relajantes|masajes-terapeuticos|tratamientos-capilares|tratamiento-remodelador|remodeling)/?$ /paginas/estetica-corporal.html [R=301,L,NC]
+RewriteRule ^centro-estetica-madrid/tratamientos-esteticos/tratamientos-corporales/?$ /paginas/estetica-corporal.html [R=301,L,NC]
+
+# Medicina estética
+RewriteRule ^(medicina-estetica|acido-hialuronico|mesoterapia|biolifting|hilos-tensores|colageno-bio-rev|tratamiento-reductor-de-lineas-de-expresion|cirugia-estetica)/?$ /paginas/medicina-estetica.html [R=301,L,NC]
+RewriteRule ^centro-estetica-madrid/medicina-estetica/?$ /paginas/medicina-estetica.html [R=301,L,NC]
+
+# Depilación láser
+RewriteRule ^depilacion-laser/?$ /paginas/depilacion-laser.html [R=301,L,NC]
+
+# Sobre Qualyderm
+RewriteRule ^centro/?$ /paginas/la-clinica.html [R=301,L,NC]
+
+# Listados generales de tratamientos → sección de tratamientos de la portada
+RewriteRule ^(tratamientos-qualyderm|tratamientos-esteticos|servicios-complementarios|servicios-complementarios-2|centro-estetica-madrid|centro-estetica-madrid/tratamientos-esteticos)/?$ /#tratamientos [R=301,L,NC,NE]
+
+# Tienda antigua (tarjetas regalo, anulada) → portada
+RewriteRule ^(shop|cart|checkout|my-account|regala-salud-belleza)(/.*)?$ / [R=301,L,NC]
+RewriteRule ^(product|product-category)/ / [R=301,L,NC]
+
+# Restos de WordPress
+RewriteRule ^(sitemap_index|post-sitemap|page-sitemap|product-sitemap|category-sitemap|product_cat-sitemap|wp-sitemap)\.xml$ /sitemap.xml [R=301,L,NC]
+RewriteRule ^(feed|comments/feed)/?$ / [R=301,L,NC]
+</IfModule>
