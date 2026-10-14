@@ -177,6 +177,32 @@ nav.mainnav>a:hover::after,.nav-dropdown:hover .dropdown-toggle::after{width:100
   .page-hero--photo .ph-media{height:210px;}
 }
 
+/* ---------- primeros pasos: tarjeta de 3 columnas con pie y botón (antes de los tratamientos) ---------- */
+.steps-card{background:var(--blanco);box-shadow:0 40px 80px -50px rgba(30,50,38,.28);border-radius:2px;margin-bottom:72px;}
+/* con tarjeta de primeros pasos, la sección arranca más pegada a la cabecera */
+.treatments.treatments--steps{padding-top:56px;}
+.treat-title{text-align:center;font-size:clamp(28px,3.2vw,42px);font-weight:400;margin:0 0 44px;}
+.steps-items{display:grid;grid-template-columns:repeat(3,1fr);}
+.steps-item{padding:40px 36px 36px;text-align:center;}
+.steps-item + .steps-item{border-left:1px solid var(--linea);}
+.steps-ico{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:var(--marfil-2);display:flex;align-items:center;justify-content:center;color:var(--bronce);}
+.steps-ico svg{width:23px;height:23px;}
+.steps-item h3{font-size:20px;font-weight:400;margin-bottom:10px;}
+.steps-item p{font-size:14px;font-weight:300;color:#5b5f57;line-height:1.65;max-width:270px;margin:0 auto;}
+.steps-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 36px;border-top:1px solid var(--linea);background:linear-gradient(90deg,rgba(159,196,214,.14),rgba(159,196,214,0));}
+.steps-foot p{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--verde);}
+.steps-foot p span{font-family:'Work Sans',sans-serif;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronce);font-weight:600;margin-right:12px;}
+@media (max-width:860px){
+  .steps-card{margin-bottom:52px;}
+  .treatments.treatments--steps{padding-top:40px;}
+  .treat-title{margin-bottom:32px;}
+  .steps-items{grid-template-columns:1fr;}
+  .steps-item{padding:30px 24px 28px;}
+  .steps-item + .steps-item{border-left:none;border-top:1px solid var(--linea);}
+  .steps-foot{flex-direction:column;text-align:center;padding:24px;}
+  .steps-foot p span{display:block;margin:0 0 6px;}
+}
+
 /* ---------- treatments ---------- */
 .treatments{padding:110px 0 130px;}
 .treat-intro{max-width:600px;margin-bottom:64px;}
